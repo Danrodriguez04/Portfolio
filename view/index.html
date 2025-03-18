@@ -13,18 +13,18 @@
         <div><b id="nav-name">Daniel Santiago Rodríguez</b><i id="dropdown" class="fa-solid fa-angle-left"></i></div>
         <ul>
             <li><a href="#"><i class="fa-sharp fa-solid fa-home"></i>
-                <p>Inicio</p></a></li>
+                <p class="items">Inicio</p></a></li>
             <li><a href="#"><i class="fa-sharp fa-solid fa-user"></i>
-                <p>Sobre mi</p></a>
+                <p class="items">Sobre mi</p></a>
             </li>
             <li><a href="#"><i class="fa-sharp fa-solid fa-code"></i>
-                <p>Proyectos</p></a>
+                <p class="items">Proyectos</p></a>
             </li>
             <li><a href="#"><i class="fa-sharp fa-solid fa-home"></i>
-                <p>Blog</p></a>
+                <p class="items">Blog</p></a>
             </li>
             <li><a href="#"><i class="fa-sharp fa-solid fa-inbox"></i>
-                <p>Contacto</p></a>
+                <p class="items">Contacto</p></a>
             </li>
         </ul>
 
@@ -60,5 +60,48 @@
     </div>
 </main>
 
+<script type="module">
+    "use strict";
+
+    (()=>{
+        assignEvents();
+    })();
+
+
+    function assignEvents (){
+        const dropdown = document.querySelector("#dropdown");
+        const navBar = document.querySelector("#nav-name");
+        const texts = document.querySelectorAll(".items")
+
+        dropdown.addEventListener('click', () => {
+
+            const isOpen = navBar.style.display !== 'none';
+
+            if (isOpen){
+                dropdown.classList.replace('fa-angle-left', 'fa-angle-right');
+                document.body.style.gridTemplateColumns = '70px auto';
+                document.querySelector('#bar-nav>nav').style.width = '50px';
+                dropdown.style.left= '35px';
+                navBar.style.display= 'none';
+
+                for (let i = 0 ; i < texts.length; i++){
+                    texts[i].style.display= 'none';
+                }
+
+            }else {
+                dropdown.classList.replace('fa-angle-right', 'fa-angle-left');
+                document.body.style.gridTemplateColumns = '18% auto';
+                document.querySelector('#bar-nav>nav').style.width = '16%';
+                dropdown.style.left= '12%';
+                navBar.style.display= 'block';
+
+                for (let i = 0 ; i < texts.length; i++){
+                    texts[i].style.display= 'block';
+                }
+            }
+        });
+
+    }
+</script>
 </body>
 </html>
