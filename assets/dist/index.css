@@ -5,9 +5,8 @@
 }
 
 body{
-    display: grid;
-    grid-template-columns: 18% auto;
-    grid-template-rows: auto auto;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -18,6 +17,66 @@ ul{
     list-style: none;
 }
 
+
+#bar-nav{
+    display: none;
+}
+
+header{
+    background: linear-gradient(45deg, #b95ce4, #295dcd);
+    padding: 200px 50px;
+    border-radius: 0 0 30px 30px;
+}
+
+#dropdown-mobile {
+    position: fixed;
+    font-size: 60px;
+    top: 25px;
+    left: 30px;
+}
+
+header>#profession{
+    font-size: 45px;
+}
+
+header>h1 {
+    font-size: 60px;
+}
+
+header>p{
+    font-size: 12px;
+    color: #baacac;
+}
+
+header>div{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    column-gap: 40px;
+}
+
+header>div>a{
+    color: black;
+    font-size: 30px;
+    background-color: darkgray;
+    padding: 14px 12px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+
+
+
+/*
+
+body {
+    display: grid;
+    grid-template-columns: 18% auto;
+    grid-template-rows: auto auto;
+}
 #bar-nav{
     grid-column: 1 / 2;
     margin-right: 60px;
@@ -131,3 +190,4 @@ main{
 #projects
 
 
+*/
