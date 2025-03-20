@@ -9,8 +9,9 @@
 <body>
 
 <div id="bar-nav">
+    <span id="close-nav-mobile"><i class="fa-regular fa-circle-xmark"></i></span>
     <nav>
-        <div><b id="nav-name">Daniel Santiago Rodríguez</b><i id="dropdown" class="fa-solid"></i></div>
+        <div><b id="nav-name">Daniel Santiago Rodríguez</b><!--i id="dropdown" class="fa-solid"></i--></div>
         <ul>
             <li><a href="#"><i class="fa-sharp fa-solid fa-home"></i>
                 <p class="items">Inicio</p></a></li>
@@ -30,7 +31,7 @@
 
         <div id="social-media">
             <ul>
-                <li><a href="https://github.com/Danrodriguez04/Danrodriguez04.github.io" ><i class="fa-brands fa-github"></i></a>
+                <li><a href="https://github.com/Danrodriguez04/Danrodriguez04.github.io" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </li>
 
             </ul>
@@ -39,7 +40,7 @@
 </div>
 
 <header>
-    <span id="dropdown-mobile"><i class="fa-solid fa-bars"></i></span>
+    <span id="menu-dropdown-mobile"><i class="fa-solid fa-bars"></i></span>
     <b id="profession">Web developer</b>
     <h1>Daniel Santiago Rodriguez</h1>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when </p>
@@ -65,9 +66,25 @@
     "use strict";
 
     (()=>{
-        assignEvents();
+        dropdownMobile();
+        /*assignEvents();*/
     })();
 
+
+    function dropdownMobile(){
+        const dropdownMobile = document.querySelector("#menu-dropdown-mobile");
+        const navBar = document.querySelector("#bar-nav");
+        const buttonCloseNavMobile = document.querySelector("#close-nav-mobile");
+
+        dropdownMobile.addEventListener("click", function(){
+            navBar.style.width = "100%";
+        });
+
+        buttonCloseNavMobile.addEventListener("click", function(){
+            navBar.style.width = "0%";
+
+        })
+    }
 
     function assignEvents (){
         const dropdown = document.querySelector("#dropdown");
