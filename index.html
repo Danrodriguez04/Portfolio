@@ -31,7 +31,8 @@
 
         <div id="social-media">
             <ul>
-                <li><a href="https://github.com/Danrodriguez04/Danrodriguez04.github.io" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <li><a href="https://github.com/Danrodriguez04/Danrodriguez04.github.io" target="_blank"><i
+                        class="fa-brands fa-github"></i></a>
                 </li>
 
             </ul>
@@ -43,10 +44,13 @@
     <span id="menu-dropdown-mobile"><i class="fa-solid fa-bars"></i></span>
     <b id="profession">Web developer</b>
     <h1>Daniel Santiago Rodriguez</h1>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when </p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when </p>
     <div>
-        <a href="mailto:danielsantiagorodriguez72@gmail.com"><i class="fa-solid fa-inbox"></i><p>Contactar</p></a>
-        <a href="#"><i class="fa-solid fa-phone"></i><p>Ver CV</p></a>
+        <a href="mailto:danielsantiagorodriguez72@gmail.com"><i class="fa-solid fa-inbox"></i>
+            <p>Contactar</p></a>
+        <a href="#"><i class="fa-solid fa-phone"></i>
+            <p>Ver CV</p></a>
     </div>
 </header>
 
@@ -65,28 +69,28 @@
 <script type="module">
     "use strict";
 
-    (()=>{
+    (() => {
         dropdownMobile();
         /*assignEvents();*/
     })();
 
 
-    function dropdownMobile(){
+    function dropdownMobile() {
         const dropdownMobile = document.querySelector("#menu-dropdown-mobile");
         const navBar = document.querySelector("#bar-nav");
         const buttonCloseNavMobile = document.querySelector("#close-nav-mobile");
 
-        dropdownMobile.addEventListener("click", function(){
+        dropdownMobile.addEventListener("click", function () {
             navBar.style.width = "100%";
         });
 
-        buttonCloseNavMobile.addEventListener("click", function(){
+        buttonCloseNavMobile.addEventListener("click", function () {
             navBar.style.width = "0%";
 
         })
     }
 
-    function assignEvents (){
+    function assignEvents() {
         const dropdown = document.querySelector("#dropdown");
         const navBar = document.querySelector("#nav-name");
         const texts = document.querySelectorAll(".items")
@@ -95,26 +99,26 @@
 
             const isOpen = navBar.style.display !== 'none';
 
-            if (isOpen){
+            if (isOpen) {
                 dropdown.classList.replace('fa-angle-left', 'fa-angle-right');
                 document.body.style.gridTemplateColumns = '70px auto';
                 document.querySelector('#bar-nav>nav').style.width = '50px';
-                dropdown.style.left= '35px';
-                navBar.style.display= 'none';
+                dropdown.style.left = '35px';
+                navBar.style.display = 'none';
 
-                for (let i = 0 ; i < texts.length; i++){
-                    texts[i].style.display= 'none';
+                for (let i = 0; i < texts.length; i++) {
+                    texts[i].style.display = 'none';
                 }
 
-            }else {
+            } else {
                 dropdown.classList.replace('fa-angle-right', 'fa-angle-left');
                 document.body.style.gridTemplateColumns = '18% auto';
                 document.querySelector('#bar-nav>nav').style.width = '16%';
-                dropdown.style.left= '12%';
-                navBar.style.display= 'block';
+                dropdown.style.left = '12%';
+                navBar.style.display = 'block';
 
-                for (let i = 0 ; i < texts.length; i++){
-                    texts[i].style.display= 'block';
+                for (let i = 0; i < texts.length; i++) {
+                    texts[i].style.display = 'block';
                 }
             }
         });
