@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "name": "Personal Portfolio Website",
+    "description": "A modern responsive portfolio showcasing developer work, bio, and contact.",
+    "location": "Madrid, Spain",
+    "date": "2024-05-12",
+    "imageLocation": "/assets/img/portfolio.webp",
+    "status": "Completed",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "UI/UX"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Smart Home Controller",
+    "description": "Mobile app to manage smart home devices including lighting, temperature, and alarms.",
+    "location": "Remote",
+    "date": "2023-11-21",
+    "imageLocation": "/assets/img/smart_home.webp",
+    "status": "In Progress",
+    "skills": [
+      "Flutter",
+      "Firebase",
+      "IoT"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Inventory Tracker Dashboard",
+    "description": "Real-time warehouse inventory tracker with analytics and reports.",
+    "location": "Buenos Aires, Argentina",
+    "date": "2024-02-09",
+    "imageLocation": "/assets/img/inventory.webp",
+    "status": "Planned",
+    "skills": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "E-Commerce Platform",
+    "description": "Full online store with cart system, payment handling, and stock synchronization.",
+    "location": "Mexico City, Mexico",
+    "date": "2023-04-18",
+    "imageLocation": "/assets/img/ecommerce.webp",
+    "status": "Completed",
+    "skills": [
+      "Next.js",
+      "PostgreSQL",
+      "Stripe",
+      "REST API"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "AI Resume Scanner",
+    "description": "Tool that scans resumes and matches skills to job openings using NLP.",
+    "location": "Remote",
+    "date": "2024-10-03",
+    "imageLocation": "/assets/img/resume_scanner.webp",
+    "status": "In Progress",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "TensorFlow",
+      "Docker"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Car Rental Management System",
+    "description": "System for managing car reservations, fleet maintenance, and user history.",
+    "location": "Bogotá, Colombia",
+    "date": "2023-12-30",
+    "imageLocation": "/assets/img/car_rental.webp",
+    "status": "Paused",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "MySQL"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Fitness Tracking App",
+    "description": "App for logging workouts, tracking metrics, and following fitness plans.",
+    "location": "San José, Costa Rica",
+    "date": "2024-01-11",
+    "imageLocation": "/assets/img/fitness.webp",
+    "status": "Completed",
+    "skills": [
+      "Kotlin",
+      "SQLite",
+      "Figma"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Restaurant Order Dashboard",
+    "description": "Table and order management dashboard for restaurants with real-time updates.",
+    "location": "Lima, Peru",
+    "date": "2022-07-27",
+    "imageLocation": "/assets/img/restaurant.webp",
+    "status": "Archived",
+    "skills": [
+      "Vue.js",
+      "PHP",
+      "MariaDB",
+      "WebSockets"
+    ]
+  }
+]
+

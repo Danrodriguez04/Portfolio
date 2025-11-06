@@ -69,9 +69,16 @@
 <script type="module">
     "use strict";
 
-    (() => {
+    import {ProjectController} from "./controller/ProjectController.js";
+
+
+    (async () => {
+        const projectController = new ProjectController();
+        const projects = await projectController.findAllProjects();
+
         dropdownMobile();
-        /*assignEvents();*/
+        drawProjects(projects);
+
     })();
 
 
@@ -84,10 +91,45 @@
             navBar.style.width = "100%";
         });
 
+        document.querySelector("#bar-nav>nav").addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+
+        navBar.addEventListener("click", function () {
+            navBar.style.width = "0%";
+        })
+
         buttonCloseNavMobile.addEventListener("click", function () {
             navBar.style.width = "0%";
-
         })
+    }
+
+
+    function drawProjects(projects){
+        const projectContainer = document.querySelector('#project-list');
+
+
+        console.log(projects);
+        for (const project of projects) {
+            const divProject = document.createElement('DIV');
+            const title = document.createElement('h3');
+            const description = document.createElement('p');
+
+            divProject.className = 'project';
+
+
+            title.innerHTML = project.getName();
+            description.innerHTML = project.getDescription();
+
+
+
+            divProject.append(title);
+            divProject.append(description);
+
+
+            projectContainer.append(divProject);
+        }
+
     }
 
     function assignEvents() {
