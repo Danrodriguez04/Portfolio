@@ -116,20 +116,20 @@
             const content = document.createElement('DIV');
             const title = document.createElement('h3');
             const description = document.createElement('p');
-            const button = document.createElement('BUTTON');
+            const button = document.createElement('A');
 
             card.className = 'card';
             image.src= project.getImageLocation();
             title.innerHTML = project.getName();
             description.innerHTML = project.getDescription();
             button.innerHTML = 'Ver proyecto !';
+            button.href= '#'
             button.className = 'see-more';
 
             content.append(title);
             content.append(description);
             content.append(button);
-            card.append(image);
-            card.append(content);
+            card.append(image,content);
 
             projectContainer.append(card);
         }
