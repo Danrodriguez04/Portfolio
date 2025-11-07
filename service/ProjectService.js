@@ -9,11 +9,10 @@ export class ProjectService{
         headers.append("content-type", "application/json");
 
         const generalRoute = 'https://portfol04.netlify.app/';
-        const response = await fetch(generalRoute +'assets/projects.json',{
+        const response = await fetch('/assets/projects.json')/*,{
             headers : headers,
-            method: 'POST'
-        });
-
+            method: 'GET'
+        });*/
         const projects = await response.json();
 
         return projects.map(json => Project.jsonToProject(json));
