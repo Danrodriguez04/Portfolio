@@ -34,7 +34,9 @@
                 <li><a href="https://github.com/Danrodriguez04/Danrodriguez04.github.io" target="_blank"><i
                         class="fa-brands fa-github"></i></a>
                 </li>
-
+                <li><a href="www.linkedin.com/in/daniel-santiago-rodríguez-bbb067221" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -66,11 +68,11 @@
     </div>
 </main>
 
+
 <script type="module">
     "use strict";
 
     import {ProjectController} from "./controller/ProjectController.js";
-
 
     (async () => {
         const projectController = new ProjectController();
@@ -78,7 +80,6 @@
 
         dropdownMobile();
         drawProjects(projects);
-
     })();
 
 
@@ -108,26 +109,29 @@
     function drawProjects(projects){
         const projectContainer = document.querySelector('#project-list');
 
-
         console.log(projects);
         for (const project of projects) {
-            const divProject = document.createElement('DIV');
+            const card = document.createElement('DIV');
+            const image = document.createElement('IMG');
+            const content = document.createElement('DIV');
             const title = document.createElement('h3');
             const description = document.createElement('p');
+            const button = document.createElement('BUTTON');
 
-            divProject.className = 'project';
-
-
+            card.className = 'card';
+            image.src= project.getImageLocation();
             title.innerHTML = project.getName();
             description.innerHTML = project.getDescription();
+            button.innerHTML = 'Ver proyecto !';
+            button.className = 'see-more';
 
+            content.append(title);
+            content.append(description);
+            content.append(button);
+            card.append(image);
+            card.append(content);
 
-
-            divProject.append(title);
-            divProject.append(description);
-
-
-            projectContainer.append(divProject);
+            projectContainer.append(card);
         }
 
     }
