@@ -22,7 +22,7 @@ h3{
 }
 
 p{
-    font-size: 25px;
+    font-size: 30px;
 }
 
 a {
@@ -33,12 +33,6 @@ ul {
     list-style: none;
 }
 
-header {
-    background: linear-gradient(45deg, #b95ce4, #295dcd);
-    padding: 300px 50px;
-    border-radius: 0 0 30px 30px;
-}
-
 #menu-dropdown-mobile {
     position: fixed;
     font-size: 60px;
@@ -46,35 +40,56 @@ header {
     left: 30px;
 }
 
-header > #profession {
-    font-size: 45px;
+header {
+    background: linear-gradient(45deg, #b95ce4, #295dcd);
+    height: 100vh;
+    border-radius: 0 0 30px 30px;
 }
 
-header > p {
-    font-size: 12px;
-    color: #baacac;
+header{
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
 
-header > div {
-    padding-top: 30px;
+header>div{
+    padding: 30px 0 30px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+header > div > div {
     display: flex;
     flex-direction: row;
     justify-content: left;
     column-gap: 40px;
 }
 
-header > div > a {
+header > div > #profession {
+    font-size: 45px;
+}
+
+header > div > p {
+    color: #baacac;
+}
+
+header > div > div{
+    padding: 28px 15px;
+}
+
+header > div > div > a {
     color: black;
     font-size: 30px;
     background-color: darkgray;
     padding: 14px 12px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
+    column-gap: 40px;
 }
 
-header > div > a:hover {
+header >div > div > a:hover {
     cursor: pointer;
     background-color: #111111;
     color: white;
