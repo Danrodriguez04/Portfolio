@@ -108,7 +108,7 @@
 
     function drawProjects(projects){
         const projectContainer = document.querySelector('#project-list');
-
+        const generalRoute = 'https://portfol04.netlify.app'
         console.log(projects);
         for (const project of projects) {
             const card = document.createElement('DIV');
@@ -119,7 +119,7 @@
             const button = document.createElement('BUTTON');
 
             card.className = 'card';
-            image.src= project.getImageLocation();
+            image.src= generalRoute + project.getImageLocation();
             title.innerHTML = project.getName();
             description.innerHTML = project.getDescription();
             button.innerHTML = 'Ver proyecto !';
