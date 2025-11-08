@@ -7,7 +7,6 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 h1 {
@@ -43,7 +42,7 @@ ul {
 
 header {
     background: linear-gradient(45deg, #b95ce4, #295dcd);
-    height: 100vh;
+    height: 100lvh;
     border-radius: 0 0 30px 30px;
 }
 
@@ -97,7 +96,7 @@ header >div > div > a:hover {
 }
 
 #bar-nav {
-    height: 100vh;
+    height: 100lvh;
     width: 0;
     position: fixed;
     z-index: 1;
