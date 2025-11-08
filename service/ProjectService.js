@@ -1,7 +1,7 @@
 import {Project} from "../model/Project.js";
+import {Skill} from "../model/Skill.js";
 
 export class ProjectService{
-
 
 
     async findAllProjects(){
@@ -15,7 +15,12 @@ export class ProjectService{
         });*/
         const projects = await response.json();
 
-        return projects.map(json => Project.jsonToProject(json));
+        return projects.map((json) => {
+            let project = Project.jsonToProject(json);
+            const skills = json.skills.map(j => Skill.jsonToSkill(j));
+            project.setSkills(skills);
+            return project;
+        });
     }
 
 

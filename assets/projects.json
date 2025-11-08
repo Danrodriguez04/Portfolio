@@ -8,10 +8,10 @@
     "imageLocation": "/assets/img/portfolio.webp",
     "status": "Completed",
     "skills": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "UI/UX"
+      { "name": "HTML", "classIcon": "fa-brands fa-html5", "type": "front" },
+      { "name": "CSS", "classIcon": "fa-brands fa-css3-alt", "type": "front" },
+      { "name": "JavaScript", "classIcon": "fa-brands fa-js", "type": "front" },
+      { "name": "UI/UX", "classIcon": "fa-solid fa-object-group", "type": "design" }
     ]
   },
   {
@@ -23,9 +23,9 @@
     "imageLocation": "/assets/img/smart_home.webp",
     "status": "In Progress",
     "skills": [
-      "Flutter",
-      "Firebase",
-      "IoT"
+      { "name": "Flutter", "classIcon": "fa-brands fa-android", "type": "mobile" },
+      { "name": "Firebase", "classIcon": "fa-solid fa-fire", "type": "back" },
+      { "name": "IoT", "classIcon": "fa-solid fa-network-wired", "type": "hardware" }
     ]
   },
   {
@@ -37,9 +37,9 @@
     "imageLocation": "/assets/img/inventory.webp",
     "status": "Planned",
     "skills": [
-      "React",
-      "Node.js",
-      "MongoDB"
+      { "name": "React", "classIcon": "fa-brands fa-react", "type": "front" },
+      { "name": "Node.js", "classIcon": "fa-brands fa-node-js", "type": "back" },
+      { "name": "MongoDB", "classIcon": "fa-solid fa-database", "type": "db" }
     ]
   },
   {
@@ -51,10 +51,10 @@
     "imageLocation": "/assets/img/ecommerce.webp",
     "status": "Completed",
     "skills": [
-      "Next.js",
-      "PostgreSQL",
-      "Stripe",
-      "REST API"
+      { "name": "Next.js", "classIcon": "fa-brands fa-neos", "type": "full" },
+      { "name": "PostgreSQL", "classIcon": "fa-solid fa-database", "type": "db" },
+      { "name": "Stripe", "classIcon": "fa-brands fa-stripe", "type": "back" },
+      { "name": "REST API", "classIcon": "fa-solid fa-plug", "type": "back" }
     ]
   },
   {
@@ -66,10 +66,10 @@
     "imageLocation": "/assets/img/resume_scanner.webp",
     "status": "In Progress",
     "skills": [
-      "Python",
-      "FastAPI",
-      "TensorFlow",
-      "Docker"
+      { "name": "Python", "classIcon": "fa-brands fa-python", "type": "back" },
+      { "name": "FastAPI", "classIcon": "fa-solid fa-rocket", "type": "back" },
+      { "name": "TensorFlow", "classIcon": "fa-solid fa-brain", "type": "ml" },
+      { "name": "Docker", "classIcon": "fa-brands fa-docker", "type": "devops" }
     ]
   },
   {
@@ -81,9 +81,9 @@
     "imageLocation": "/assets/img/car_rental.webp",
     "status": "Paused",
     "skills": [
-      "Java",
-      "Spring Boot",
-      "MySQL"
+      { "name": "Java", "classIcon": "fa-brands fa-java", "type": "back" },
+      { "name": "Spring Boot", "classIcon": "fa-solid fa-leaf", "type": "back" },
+      { "name": "MySQL", "classIcon": "fa-solid fa-database", "type": "db" }
     ]
   },
   {
@@ -95,9 +95,9 @@
     "imageLocation": "/assets/img/fitness.webp",
     "status": "Completed",
     "skills": [
-      "Kotlin",
-      "SQLite",
-      "Figma"
+      { "name": "Kotlin", "classIcon": "fa-solid fa-mobile", "type": "mobile" },
+      { "name": "SQLite", "classIcon": "fa-solid fa-database", "type": "db" },
+      { "name": "Figma", "classIcon": "fa-brands fa-figma", "type": "design" }
     ]
   },
   {
@@ -109,11 +109,10 @@
     "imageLocation": "/assets/img/restaurant.webp",
     "status": "Archived",
     "skills": [
-      "Vue.js",
-      "PHP",
-      "MariaDB",
-      "WebSockets"
+      { "name": "Vue.js", "classIcon": "fa-brands fa-vuejs", "type": "front" },
+      { "name": "PHP", "classIcon": "fa-brands fa-php", "type": "back" },
+      { "name": "MariaDB", "classIcon": "fa-solid fa-database", "type": "db" },
+      { "name": "WebSockets", "classIcon": "fa-solid fa-wifi", "type": "back" }
     ]
   }
 ]
-
