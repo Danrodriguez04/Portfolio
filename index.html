@@ -113,14 +113,31 @@
     function drawProjects(projects){
         const projectContainer = document.querySelector('#project-list');
         const skillsContainer = document.querySelector('#skills-list');
+        const skills = new Set();
 
-        const generalRoute = 'https://portfol04.netlify.app'
         console.log(projects);
         for (const project of projects) {
             createCardProject(project,projectContainer);
-
+            skills.add(...project.getSkills());
         }
 
+        for(const skill of skills){
+            createSkillSection(skill,skillsContainer);
+        }
+
+    }
+
+    function createSkillSection(skill, skillContainer){
+        const containerSkill = document.createElement('DIV');
+        const iconSkill = document.createElement('LI')
+        const iconName = document.createElement('P');
+
+        iconSkill.classList.add(...skill.getClassIcon().split(' '), 'iconSkill');
+        iconName.innerHTML = skill.getName();
+
+        containerSkill.append(iconSkill,iconName);
+
+        skillContainer.append(containerSkill);
     }
 
     function createCardProject(project,projectContainer){

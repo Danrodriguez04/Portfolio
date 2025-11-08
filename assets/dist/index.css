@@ -274,6 +274,32 @@ main > #skills {
     opacity: 0.85;
 }
 
+
+
+#skills-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills-list>div{
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.iconSkill{
+    font-size: 80px;
+}
+
+
+
+
+
+
 @media (width >= 1000px) {
     #project-list{
         justify-content: center;
@@ -302,6 +328,8 @@ main > #skills {
         background: transparent;
         backdrop-filter: blur(10px);
     }
+
+
 
 }
 
