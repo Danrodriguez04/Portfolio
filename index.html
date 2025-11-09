@@ -12,49 +12,54 @@
 
 <header>
 
-    <div id="bar-nav">
-        <span id="close-nav-mobile"><i class="fa-regular fa-circle-xmark"></i></span>
-        <nav>
-            <div><b id="nav-name">Daniel Santiago Rodríguez</b><!--i id="dropdown" class="fa-solid"></i--></div>
-            <ul>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-home"></i>
-                    <p class="items">Inicio</p></a></li>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-user"></i>
-                    <p class="items">Sobre mi</p></a>
-                </li>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-code"></i>
-                    <p class="items">Proyectos</p></a>
-                </li>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-home"></i>
-                    <p class="items">Blog</p></a>
-                </li>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-inbox"></i>
-                    <p class="items">Contacto</p></a>
-                </li>
-            </ul>
-
-            <div id="social-media">
+    <div id="container-bar-nav">
+        <div>
+            <span id="menu-dropdown-mobile"><i class="fa-solid fa-bars"></i></span>
+        </div>
+        <div id="hidden-bar">
+            <span id="close-nav-mobile"><i class="fa-regular fa-circle-xmark"></i></span>
+            <nav id="bar-nav">
+                <div><b id="nav-name">Daniel Santiago Rodríguez</b><!--i id="dropdown" class="fa-solid"></i--></div>
                 <ul>
-                    <li><a href="https://github.com/Danrodriguez04/Danrodriguez04.github.io" target="_blank"><i
-                            class="fa-brands fa-github"></i></a>
+                    <li><a href="#"><i class="fa-sharp fa-solid fa-home"></i>
+                        <p class="items">Inicio</p></a></li>
+                    <li><a href="#"><i class="fa-sharp fa-solid fa-user"></i>
+                        <p class="items">Sobre mi</p></a>
                     </li>
-                    <li><a href="www.linkedin.com/in/daniel-santiago-rodríguez-bbb067221" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a>
+                    <li><a href="#"><i class="fa-sharp fa-solid fa-code"></i>
+                        <p class="items">Proyectos</p></a>
+                    </li>
+                    <li><a href="#"><i class="fa-sharp fa-solid fa-home"></i>
+                        <p class="items">Blog</p></a>
+                    </li>
+                    <li><a href="#"><i class="fa-sharp fa-solid fa-inbox"></i>
+                        <p class="items">Contacto</p></a>
                     </li>
                 </ul>
-            </div>
-        </nav>
+
+                <div id="social-media">
+                    <ul>
+                        <li><a href="https://github.com/Danrodriguez04/Danrodriguez04.github.io" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li><a href="www.linkedin.com/in/daniel-santiago-rodríguez-bbb067221" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
 </header>
 
 
 <main>
     <section>
-        <span id="menu-dropdown-mobile"><i class="fa-solid fa-bars"></i></span>
         <div>
             <b id="profession">Web / Mobile developer</b>
             <h1>Daniel Santiago Rodriguez</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's
                 standard dummy text ever since the 1500s, when </p>
             <div>
                 <a href="mailto:danielsantiagorodriguez72@gmail.com"><i class="fa-solid fa-inbox"></i>
@@ -92,45 +97,45 @@
 
     function dropdownMobile() {
         const dropdownMobile = document.querySelector("#menu-dropdown-mobile");
-        const navBar = document.querySelector("#bar-nav");
+        const navBar = document.querySelector("#hidden-bar");
         const buttonCloseNavMobile = document.querySelector("#close-nav-mobile");
 
         dropdownMobile.addEventListener("click", function () {
-            navBar.style.width = "100%";
+            navBar.style.display = 'block';
         });
 
-        document.querySelector("#bar-nav>nav").addEventListener("click", (event) => {
+        document.querySelector("#bar-nav").addEventListener("click", (event) => {
             event.stopPropagation();
         });
 
         navBar.addEventListener("click", function () {
-            navBar.style.width = "0%";
+            navBar.style.display = 'none';
         })
 
         buttonCloseNavMobile.addEventListener("click", function () {
-            navBar.style.width = "0%";
+            navBar.style.display = 'none';
         })
     }
 
 
-    function drawProjects(projects){
+    function drawProjects(projects) {
         const projectContainer = document.querySelector('#project-list');
         const skillsContainer = document.querySelector('#skills-list');
         const skills = new Set();
 
         console.log(projects);
         for (const project of projects) {
-            createCardProject(project,projectContainer);
+            createCardProject(project, projectContainer);
             skills.add(...project.getSkills());
         }
 
-        for(const skill of skills){
-            createSkillSection(skill,skillsContainer);
+        for (const skill of skills) {
+            createSkillSection(skill, skillsContainer);
         }
 
     }
 
-    function createSkillSection(skill, skillContainer){
+    function createSkillSection(skill, skillContainer) {
         const containerSkill = document.createElement('DIV');
         const iconSkill = document.createElement('LI')
         const iconName = document.createElement('P');
@@ -138,12 +143,12 @@
         iconSkill.classList.add(...skill.getClassIcon().split(' '), 'iconSkill');
         iconName.innerHTML = skill.getName();
 
-        containerSkill.append(iconSkill,iconName);
+        containerSkill.append(iconSkill, iconName);
 
         skillContainer.append(containerSkill);
     }
 
-    function createCardProject(project,projectContainer){
+    function createCardProject(project, projectContainer) {
         const card = document.createElement('DIV');
         const image = document.createElement('IMG');
         const content = document.createElement('DIV');
@@ -152,17 +157,17 @@
         const button = document.createElement('A');
 
         card.className = 'card';
-        image.src= project.getImageLocation();
+        image.src = project.getImageLocation();
         title.innerHTML = project.getName();
         description.innerHTML = project.getDescription();
         button.innerHTML = 'Ver proyecto !';
-        button.href= '#'
+        button.href = '#'
         button.className = 'see-more';
 
         content.append(title);
         content.append(description);
         content.append(button);
-        card.append(image,content);
+        card.append(image, content);
 
         projectContainer.append(card);
     }
