@@ -41,45 +41,46 @@ ul {
     left: 30px;
 }
 
-header {
+main>section {
     background: linear-gradient(45deg, #b95ce4, #295dcd);
     height: 100lvh;
-    border-radius: 0 0 30px 30px;
+    border-radius: 30px;
+    box-shadow:  3px 3px rgb(0 0 0 / 20%), -1em 0 0.4em #295dcd;
 }
 
-header{
+main>section{
     display: flex;
     justify-items: center;
     align-items: center;
 }
 
-header>div{
+main>section>div{
     padding: 30px 0 30px 20px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
-header > div > div {
+main>section > div > div {
     display: flex;
     flex-direction: row;
     justify-content: left;
     column-gap: 40px;
 }
 
-header > div > #profession {
+main>section > div > #profession {
     font-size: 45px;
 }
 
-header > div > p {
+main>section > div > p {
     color: #baacac;
 }
 
-header > div > div{
+main>section > div > div{
     padding: 28px 15px;
 }
 
-header > div > div > a {
+main>section > div > div > a {
     color: black;
     font-size: 30px;
     background-color: darkgray;
@@ -90,7 +91,7 @@ header > div > div > a {
     column-gap: 40px;
 }
 
-header >div > div > a:hover {
+main>section >div > div > a:hover {
     cursor: pointer;
     background-color: #111111;
     color: white;
@@ -200,7 +201,7 @@ header >div > div > a:hover {
 }
 
 main {
-    margin-top: 80px;
+    margin-top: 100px;
     padding: 0 50px;
     display: flex;
     flex-direction: column;
@@ -278,7 +279,8 @@ main > #skills {
 
 #skills-list{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
 }
 
