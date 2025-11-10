@@ -34,18 +34,29 @@ ul {
     list-style: none;
 }
 
-#menu-dropdown-mobile {
+#container-bar-nav{
     position: fixed;
-    font-size: 60px;
-    top: 25px;
-    left: 30px;
+    height: 10vh;
+    width: 100vw;
+    padding: 20px 35px;
 }
 
-#container-bar-nav{
+#container-bar-nav > div:nth-child(1){
+    border: solid black 1px;
+    padding: 20px 30px;
+    background: darkgray;
+    opacity: 0.5;
+    border-radius: 16px;
+}
 
+#menu-dropdown-mobile {
+    font-size: 60px;
+    color: black;
+    opacity: 1;
 }
 
 #hidden-bar{
+    margin: 0;
     display: none;
     height: 100lvh;
     width: 100%;
@@ -65,9 +76,8 @@ ul {
 }
 
 #bar-nav {
-    position: relative;
     background-color: rgb(0, 0, 0);
-    height: 100vh;
+    height: 100%;
     width: 70%;
     border-radius: 0 20px 20px 0;
     text-align: center;
