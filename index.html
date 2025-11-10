@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/dist/index.css">
+    <link rel="stylesheet" href="assets/dist/bar-nav.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
@@ -32,7 +33,7 @@
                     <li><a href="#"><i class="fa-sharp fa-solid fa-home"></i>
                         <p class="items">Blog</p></a>
                     </li>
-                    <li><a href="#"><i class="fa-sharp fa-solid fa-inbox"></i>
+                    <li><a href="/view/contact.html"><i class="fa-sharp fa-solid fa-inbox"></i>
                         <p class="items">Contacto</p></a>
                     </li>
                 </ul>
@@ -85,6 +86,7 @@
     "use strict";
 
     import {ProjectController} from "./controller/ProjectController.js";
+    import {dropdownMobile} from "./assets/js/utils.js";
 
     (async () => {
         const projectController = new ProjectController();
@@ -93,29 +95,6 @@
         dropdownMobile();
         drawProjects(projects);
     })();
-
-
-    function dropdownMobile() {
-        const dropdownMobile = document.querySelector("#menu-dropdown-mobile");
-        const navBar = document.querySelector("#hidden-bar");
-        const buttonCloseNavMobile = document.querySelector("#close-nav-mobile");
-
-        dropdownMobile.addEventListener("click", function () {
-            navBar.style.display = 'block';
-        });
-
-        document.querySelector("#bar-nav").addEventListener("click", (event) => {
-            event.stopPropagation();
-        });
-
-        navBar.addEventListener("click", function () {
-            navBar.style.display = 'none';
-        })
-
-        buttonCloseNavMobile.addEventListener("click", function () {
-            navBar.style.display = 'none';
-        })
-    }
 
 
     function drawProjects(projects) {
@@ -170,41 +149,6 @@
         card.append(image, content);
 
         projectContainer.append(card);
-    }
-
-    function assignEvents() {
-        const dropdown = document.querySelector("#dropdown");
-        const navBar = document.querySelector("#nav-name");
-        const texts = document.querySelectorAll(".items")
-
-        dropdown.addEventListener('click', () => {
-
-            const isOpen = navBar.style.display !== 'none';
-
-            if (isOpen) {
-                dropdown.classList.replace('fa-angle-left', 'fa-angle-right');
-                document.body.style.gridTemplateColumns = '70px auto';
-                document.querySelector('#bar-nav>nav').style.width = '50px';
-                dropdown.style.left = '35px';
-                navBar.style.display = 'none';
-
-                for (let i = 0; i < texts.length; i++) {
-                    texts[i].style.display = 'none';
-                }
-
-            } else {
-                dropdown.classList.replace('fa-angle-right', 'fa-angle-left');
-                document.body.style.gridTemplateColumns = '18% auto';
-                document.querySelector('#bar-nav>nav').style.width = '16%';
-                dropdown.style.left = '12%';
-                navBar.style.display = 'block';
-
-                for (let i = 0; i < texts.length; i++) {
-                    texts[i].style.display = 'block';
-                }
-            }
-        });
-
     }
 </script>
 </body>
