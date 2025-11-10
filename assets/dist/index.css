@@ -83,7 +83,7 @@ main>section >div > div > a:hover {
 }
 
 main {
-    margin-top: 100px;
+    margin-top: 20vw;
     padding: 0 50px;
     display: flex;
     flex-direction: column;

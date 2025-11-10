@@ -11,6 +11,7 @@ ul {
     height: 10vh;
     width: 100vw;
     padding: 20px 35px;
+    background: white;
 }
 
 #container-bar-nav > div:nth-child(1){

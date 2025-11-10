@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/dist/bar-nav.css">
+    <link rel="stylesheet" href="../assets/dist/contact.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
     <title>Contact</title>
 </head>
 <body>
@@ -46,6 +51,35 @@
         </div>
     </div>
 </header>
+
+<main>
+    <div id="container-form">
+        <form>
+            <label></label>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Email" >
+            <input type="tel" placeholder="Phone">
+
+            <textarea>
+
+            </textarea>
+            <button>Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+</main>
+
+
+<script type="module">
+    'use strict';
+    import {dropdownMobile} from "../assets/js/utils.js";
+
+    (()=>{
+        dropdownMobile();
+    })();
+
+
+
+</script>
 
 </body>
 </html>
