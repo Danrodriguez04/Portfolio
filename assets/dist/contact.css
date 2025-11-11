@@ -1,10 +1,11 @@
 
 #container-form{
+    margin: 12vw 0;
     background: rgba(22,22,22,0.096);
     border-radius: 24px;
     border: solid black 1px;
-
 }
+
 #container-form>form{
     display: flex;
     flex-direction: column;
@@ -17,6 +18,11 @@ form>input, form>textarea, form>button{
     border: none;
     border-radius: 5px;
     outline: none;
+    font-size: 30px;
+}
+
+form>textarea{
+    font-size: 20px;
 }
 
 form>textarea{
