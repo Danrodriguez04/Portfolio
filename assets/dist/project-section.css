@@ -39,3 +39,12 @@
     transform: translateY(-10px);
     opacity: 0.85;
 }
+
+
+
+@media (min-width: 1024px) {
+    .card {
+        flex-basis: 20%;
+
+    }
+}
