@@ -1,0 +1,41 @@
+#project-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 130px;
+    row-gap: 80px;
+    column-gap: 70px;
+}
+.card {
+    flex-grow: 1;
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: solid rgba(0, 0, 0, 0.35) 1px;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 24px;
+    transition: transform .3s, opacity .3s;
+}
+
+.card>div{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.card img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+
+    border-radius: inherit;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    opacity: 0.85;
+}

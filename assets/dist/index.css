@@ -26,46 +26,46 @@ p{
     font-size: 30px;
 }
 
-main>section {
+header>section {
     background: linear-gradient(45deg, #b95ce4, #295dcd);
     height: 100lvh;
     border-radius: 30px;
     box-shadow:  3px 3px rgb(0 0 0 / 20%), -0.5em 0.5em 1em #295dcd;
 }
 
-main>section{
+header>section{
     display: flex;
     justify-items: center;
     align-items: center;
 }
 
-main>section>div{
+header>section>div{
     padding: 30px 0 30px 20px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
-main>section > div > div {
+header>section > div > div {
     display: flex;
     flex-direction: row;
     justify-content: left;
     column-gap: 40px;
 }
 
-main>section > div > #profession {
+header>section > div > #profession {
     font-size: 45px;
 }
 
-main>section > div > p {
+header>section > div > p {
     color: #baacac;
 }
 
-main>section > div > div{
+header>section > div > div{
     padding: 28px 15px;
 }
 
-main>section > div > div > a {
+header>section > div > div > a {
     color: black;
     font-size: 30px;
     background-color: darkgray;
@@ -76,13 +76,13 @@ main>section > div > div > a {
     column-gap: 40px;
 }
 
-main>section >div > div > a:hover {
+header>section >div > div > a:hover {
     cursor: pointer;
     background-color: #111111;
     color: white;
 }
 
-main {
+main, header {
     margin-top: 20vw;
     padding: 0 50px;
     display: flex;
@@ -100,45 +100,6 @@ main > #skills {
     margin-top: 80px;
 }
 
-
-#project-list{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 130px;
-    row-gap: 120px;
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 40px;
-    padding: 0 10px 50px 50px;
-    width: 100%;
-    border: solid rgba(0, 0, 0, 0.35) 1px;
-    align-items: center;
-    background: #ffffff;
-    border-radius: 24px;
-    transition: transform .3s, opacity .3s;
-}
-
-.card>div{
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    align-items: center;
-}
-
-.card img{
-    object-fit: cover;
-    object-position: center;
-    margin: -100px 0 30px 0;
-    width: 70%;
-    max-width: 1000px;
-    border-radius: inherit;
-}
-
 .see-more{
     width: 80%;
     border: 0;
@@ -149,11 +110,6 @@ main > #skills {
     background-color: #40b1c0;
     border-radius: 40px;
 
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    opacity: 0.85;
 }
 
 #skills-list{
