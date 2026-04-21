@@ -7,17 +7,19 @@
     row-gap: 80px;
     column-gap: 70px;
 }
+
 .card {
-    flex-grow: 1;
-    flex-basis: 45%;
+    flex-basis: 46%;
+    height: 400px;
     display: flex;
     flex-direction: column;
     text-align: center;
     border: solid rgba(0, 0, 0, 0.35) 1px;
     align-items: center;
-    background: #ffffff;
     border-radius: 24px;
     transition: transform .3s, opacity .3s;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card>div{
@@ -27,13 +29,13 @@
     align-items: center;
 }
 
-.card img{
+/*.card img{
     object-fit: cover;
     object-position: center;
     width: 100%;
 
     border-radius: inherit;
-}
+}*/
 
 .card:hover {
     transform: translateY(-10px);
