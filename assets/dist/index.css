@@ -16,6 +16,11 @@ a{
     font-size: 40px;
 }
 
+span{
+    font-family: 'Inter', sans-serif;
+    font-size: 35px;
+}
+
 i{
     color: #111111;
     font-size: 30px;

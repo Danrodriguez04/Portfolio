@@ -7,27 +7,32 @@
     <link rel="stylesheet" href="assets/dist/bar-nav.css">
     <!--link rel="stylesheet" href="assets/dist/project-section.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.css"-->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>Portfolio</title>
 </head>
 <body>
 <header>
     <nav class="navbar">
         <div id="dropdown">
-            <button id="open-navbar" class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <span id="title-nav">Navegación</span>
+            <span id="close-nav">X</span>
         </div>
-        <div class="container">
+        <div class="container-nav">
             <div class="navbar-brand">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projectos</a></li>
-                    <li><a href="#skils">Skills</a></li>
-                    <li><a href="#reviews">Reseñas</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#home"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="#about"><i class="fa-regular fa-user"></i> Sobre mí</a></li>
+                    <li><a href="#projects"><i class="fa-solid fa-jet-fighter"></i> Projectos</a></li>
+                    <li><a href="#skils"><i class="fa-regular fa-chart-bar"></i> Habilidades</a></li>
+                    <li><a href="#contact"><i class="fa-regular fa-envelope"></i> Contacto</a></li>
                 </ul>
+            </div>
+        </div>
+        <div id="follow">
+            <span>Tambien me puedes encontrar en</span>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
     </nav>
@@ -35,9 +40,9 @@
 
 <main>
     <section id="home"></section>
+    <section id="about"></section>
     <section id="projects"></section>
     <section id="skils"></section>
-    <section id="reviews"></section>
     <section id="contact"></section>
 </main>
 
