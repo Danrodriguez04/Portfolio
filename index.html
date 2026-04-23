@@ -39,11 +39,50 @@
 </header>
 
 <main>
-    <section id="home"></section>
-    <section id="about"></section>
-    <section id="projects"></section>
-    <section id="skils"></section>
-    <section id="contact"></section>
+    <section id="home">
+        <span id="greeting">Hola!, soy </span>
+        <span id="name">Daniel Rodríguez</span>
+        <span id="job">Desarrollador tanto web/mobile con ganas de crear/mejorar experiencias y funcionalidades</span>
+    </section>
+    <section id="about">
+        <h2>Sobre mí</h2>
+        <div class="container-about">
+            <p></p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="container-projects">
+
+        </div>
+    </section>
+    <section id="skils">
+        <h2>Habilidades</h2>
+        <div class="container-habilidades">
+
+        </div>
+    </section>
+    <section id="contact">
+        <div class="title-contact">
+            <h2>Contacto</h2>
+            <h3>Hablemos de tu idea</h3>
+        </div>
+        <div class="info-contact">
+
+        </div>
+
+        <form>
+            <label for="nameuser">Nombre</label>
+            <input type="text" id="nameuser" name="nameuser" placeholder="Ingresa tu nombre">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com">
+            <label for="subject">Asunto <span class="subtext">(opcional)</span></label>
+            <input type="text" id="subject" name="subject" placeholder="¿Sobre que quieres hablar?">
+            <label for="message">Mensaje</label>
+            <textarea id="message">Cuentame sobre tu idea, proyecto, propuesta u consulta!</textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
 </main>
 
 <script>
@@ -54,11 +93,11 @@
     })();
 
 
-    function addEvents(){
+    function addEvents() {
         const buttonsOpenNav = document.getElementById('open-navbar');
 
         buttonsOpenNav.addEventListener('click', () => {
-           toggleNavbar();
+            toggleNavbar();
         });
     }
 
