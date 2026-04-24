@@ -1,49 +1,5 @@
-
-#container-form{
-    margin: 12vw 0;
-    background: rgba(22,22,22,0.096);
-    border-radius: 24px;
-    border: solid black 1px;
-}
-
-#container-form>form{
+#contact{
     display: flex;
     flex-direction: column;
-    padding: 40px 30px;
-    gap: 20px;
-}
 
-form>input, form>textarea, form>button{
-    padding: 9px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    font-size: 30px;
-}
-
-form>textarea{
-    font-size: 20px;
-}
-
-form>textarea{
-    resize: vertical;
-}
-
-form>button{
-    cursor: pointer;
-    font-weight: 500;
-    background-color: rgb(127,255,195);
-}
-
-form>buton:hover{
-    background-color: rgb(69,240,183);
-}
-
-form>button:active{
-    background-color: rgb(149,241,210);
-}
-
-form>button>i{
-    color: rgb(59,59,59);
-    margin-left: 10px;
 }
