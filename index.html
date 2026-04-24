@@ -14,26 +14,28 @@
             <h1>Daniel Rodríguez</h1>
             <span id="open-navbar"><i class="fa-solid fa-bars"></i></span>
         </div>
-        <div id="navbar-content">
-            <div id="dropdown">
-                <span id="title-nav">Navegación</span>
-                <span id="close-nav"><i class="fa-solid fa-xmark"></i></span>
-            </div>
-            <div class="container-nav">
-                <div class="navbar-brand">
-                    <ul>
-                        <li><a href="#home"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                        <li><a href="#about"><i class="fa-regular fa-user"></i> Sobre mí</a></li>
-                        <li><a href="#projects"><i class="fa-solid fa-jet-fighter"></i> Projectos</a></li>
-                        <li><a href="#skils"><i class="fa-regular fa-chart-bar"></i> Habilidades</a></li>
-                        <li><a href="#contact"><i class="fa-regular fa-envelope"></i> Contacto</a></li>
-                    </ul>
+        <div id="container-nav">
+            <div id="navbar-content">
+                <div id="dropdown">
+                    <span id="title-nav">Navegación</span>
+                    <span id="close-nav"><i class="fa-solid fa-xmark"></i></span>
                 </div>
-            </div>
-            <div id="follow">
-                <span>Tambien me puedes encontrar en</span>
-                <div class="social">
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <div class="container-nav">
+                    <div class="navbar-brand">
+                        <ul>
+                            <li><a href="#home"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                            <li><a href="#about"><i class="fa-regular fa-user"></i> Sobre mí</a></li>
+                            <li><a href="#projects"><i class="fa-solid fa-jet-fighter"></i> Projectos</a></li>
+                            <li><a href="#skils"><i class="fa-regular fa-chart-bar"></i> Habilidades</a></li>
+                            <li><a href="#contact"><i class="fa-regular fa-envelope"></i> Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="follow">
+                    <span>Tambien me puedes encontrar en</span>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,19 +98,32 @@
 
 
     function addEvents() {
-        const buttonsOpenNav = document.getElementById('open-navbar');
+        const buttonsOpenNav = document.querySelector('#open-navbar');
+        const buttonCloseNavbar = document.querySelector('#close-nav');
 
         buttonsOpenNav.addEventListener('click', () => {
             toggleNavbar();
         });
+        buttonCloseNavbar.addEventListener('click', () =>{
+           toggleNavbar();
+        });
     }
 
     function toggleNavbar() {
-        const navbar = document.getElementById('navbar');
-        if (navbar) {
+        const navbar = document.querySelector('#container-nav');
+        const mainContainer = document.querySelector('main');
+
+        document.querySelector("#container-nav").addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+
+
+        if (navbar.classList.contains('is-active') && mainContainer.classList.contains('is-active')) {
             navbar.classList.remove('is-active');
+            mainContainer.classList.remove('is-active');
         } else {
             navbar.classList.add('is-active');
+            mainContainer.classList.add('is-active');
         }
     }
 
