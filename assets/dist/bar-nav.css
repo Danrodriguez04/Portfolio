@@ -92,14 +92,13 @@
     border-bottom: solid 1px #e5e5e5;
 }
 
-ul {
-    list-style-type: none;
+.navbar-brand>ul {
     display: flex;
     flex-direction: column;
     row-gap: 40px;
 }
 
-li{
+.navbar-brand>ul>li{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -107,13 +106,13 @@ li{
     border-radius: 16px;
 }
 
-li>a{
+.navbar-brand>ul>li>a{
     width: 100%;
     padding: 40px 30px;
     border-radius: 16px;
 }
 
-li>a:hover{
+.navbar-brand>ul>li>a:hover{
     background-color: #e5e5e5;
 }
 
