@@ -17,6 +17,17 @@
     opacity: 1;
 }
 
+#mobile-nav>a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    width: 100px;
+}
+
 #open-navbar>i, #close-nav>i{
     font-size: 50px;
 }
