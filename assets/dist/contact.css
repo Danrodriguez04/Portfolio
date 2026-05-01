@@ -114,6 +114,37 @@ a.card:hover{
     color: #b9b9b9;
 }
 
+#error-name,#error-email,#error-message{
+    color: red;
+}
+
+.no-error{
+    display: none;
+}
+
+.error{
+    display: block;
+}
+
+.error-form{
+    background-color: #8b8b8b;
+    cursor: not-allowed;
+}
+
+.send-form{
+    background-color: #8b8b8b;
+    font-size: 50px;
+    padding: 60px 50px;
+    cursor: not-allowed;
+}
+
+.no-error-form{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+
 
 
 
