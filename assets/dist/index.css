@@ -1,3 +1,8 @@
+@font-face {
+    font-family: regularFont;
+    src: url(../fonts/Roboto-VariableFont_wdth,wght.ttf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,6 +15,10 @@ body {
     flex-direction: column;
 }
 
+ul {
+    list-style-type: none;
+}
+
 a{
     text-decoration: none;
     color: #111111;
@@ -17,7 +26,7 @@ a{
 }
 
 span{
-    font-family: 'Inter', sans-serif;
+    font-family: regularFont, sans-serif;
     font-size: 35px;
 }
 
@@ -28,23 +37,39 @@ i{
 
 h1 {
     font-size: 50px;
+    font-family: regularFont, sans-serif;
 }
 
 h2 {
     font-size: 40px;
+    font-family: regularFont, sans-serif;
 }
 
 h3{
     font-size: 45px;
+    font-family: regularFont, sans-serif;
+}
+
+h4{
+    font-size: 55px;
+    font-family: regularFont, sans-serif;
 }
 
 p{
     font-size: 30px;
+    font-family: regularFont, sans-serif;
+}
+
+label{
+    font-size: 30px;
+    font-family: regularFont, sans-serif;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    row-gap: 40px;
+    padding: 50px 40px;
 }
 
 main.is-active{
