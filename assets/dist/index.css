@@ -60,6 +60,11 @@ p{
     font-family: regularFont, sans-serif;
 }
 
+label{
+    font-size: 30px;
+    font-family: regularFont, sans-serif;
+}
+
 main {
     display: flex;
     flex-direction: column;

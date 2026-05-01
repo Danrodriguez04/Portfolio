@@ -76,5 +76,45 @@ a.card:hover{
 }
 
 
+#contact>form{
+    display: flex;
+    flex-direction: column;
+    padding: 55px 50px;
+    border: solid 3px #b9b9b9;
+    border-radius: 20px;
+    row-gap: 20px;
+}
+
+#contact>form>label>i, #contact>form>label{
+    font-size: 40px;
+}
+
+#contact>form>input, #contact>form>textarea, #contact>form>button {
+    margin-bottom: 40px;
+    padding: 35px;
+    border-radius: 20px;
+    font-size: 40px;
+    border: solid 3px #ebebeb;
+}
+
+.send-form>i, .send-form{
+    color: white;
+}
+.send-form>i{
+    font-size: 40px;
+}
+
+.send-form{
+    background-color: #8b8b8b;
+    font-size: 50px;
+    padding: 60px 50px;
+}
+
+.subtext{
+    color: #b9b9b9;
+}
+
+
+
 
 
