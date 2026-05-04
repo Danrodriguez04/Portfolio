@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "title": "Navigation",
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "follow": "You can also find me on"
+  },
+  "home": {
+    "greeting": "Hi!, I'm ",
+    "job": "Web/mobile developer eager to create and improve experiences and features"
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "text": "I am a Fullstack developer passionate about learning, exploring and constantly improving through every challenge. I see each mistake as an opportunity to grow, which has helped me develop a persevering, committed and solution-oriented mindset.\n\nMy focus is not limited to web applications; it also includes mobile development. I aim to create efficient solutions that optimize processes while always prioritizing an intuitive user experience and functional design."
+  },
+  "education": {
+    "title": "EDUCATION AND/OR EXPERIENCE",
+    "degree1": "Intermediate degree in Microcomputer Systems and Networks",
+    "degree2": "Higher degree in Web Application Development",
+    "job1": "Optimization, implementation and development of internal processes in both web and mobile environments",
+    "current": "2024 - Present"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "contact": {
+    "title": "CONTACT",
+    "subtitle": "Let's talk about your idea or project",
+    "description": "Complete the form and I will reply as soon as possible",
+    "info": "Contact information",
+    "location": "Location"
+  },
+  "form": {
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+    "nameError": "Enter a name",
+    "email": "Email address",
+    "emailPlaceholder": "your@email.com",
+    "emailError": "Enter a valid email address",
+    "subject": "Subject",
+    "optional": "(optional)",
+    "subjectPlaceholder": "What would you like to talk about?",
+    "message": "Message",
+    "messagePlaceholder": "Tell me about your idea, project, proposal or inquiry!",
+    "messageError": "A message is required",
+    "send": "Send message"
+  }
+}

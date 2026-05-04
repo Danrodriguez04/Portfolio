@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "title": "Navegación",
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "follow": "También me puedes encontrar en"
+  },
+  "home": {
+    "greeting": "Hola!, soy ",
+    "job": "Desarrollador web/mobile con ganas de crear y mejorar experiencias y funcionalidades"
+  },
+  "about": {
+    "title": "SOBRE MÍ",
+    "text": "Soy desarrollador Fullstack apasionado por aprender, explorar y mejorar constantemente a partir de cada desafío. Considero cada error como una oportunidad de crecimiento, lo que me ha permitido desarrollar una mentalidad perseverante, comprometida y orientada a soluciones creativas.\n\nMi enfoque no se limita únicamente a aplicaciones web, sino que también abarca el desarrollo mobile. Busco crear soluciones eficientes que optimicen procesos, siempre priorizando una experiencia de usuario intuitiva y un diseño funcional."
+  },
+  "education": {
+    "title": "FORMACIÓN Y/O EXPERIENCIA",
+    "degree1": "Grado medio en Sistemas Microinformáticos y Redes (FPGM)",
+    "degree2": "Grado superior en Desarrollo de Aplicaciones Web",
+    "job1": "Optimización, implementación y desarrollo de procesos internos tanto en entornos web como móvil",
+    "current": "2024 - Actualmente"
+  },
+  "projects": {
+    "title": "Proyectos"
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "contact": {
+    "title": "CONTACTO",
+    "subtitle": "Hablemos de tu idea o proyecto",
+    "description": "Completa el formulario y te responderé lo antes posible",
+    "info": "Información de contacto",
+    "location": "Ubicación"
+  },
+  "form": {
+    "name": "Nombre",
+    "namePlaceholder": "Ingresa tu nombre",
+    "nameError": "Introduce un nombre",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "emailError": "Introduce un correo válido",
+    "subject": "Asunto",
+    "optional": "(opcional)",
+    "subjectPlaceholder": "¿Sobre qué quieres hablar?",
+    "message": "Mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu idea, proyecto, propuesta o consulta!",
+    "messageError": "Es necesario escribir un mensaje",
+    "send": "Enviar mensaje"
+  }
+}

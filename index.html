@@ -24,27 +24,47 @@
                 <img id="logo" src="/assets/favicon.png">
                 <span>Daniel Rodríguez</span>
             </a>
-            <span id="open-navbar"><i class="fa-solid fa-bars"></i></span>
+
+            <div>
+                <div class="language-dropdown">
+                    <button id="lang-btn">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="current-lang">ES</span>
+                    </button>
+
+                    <ul id="lang-menu" class="hidden">
+                        <li data-lang="es"><span>Español</span> <span class="flag">🇪🇸</span></li>
+                        <li data-lang="en"><span>English</span><span class="flag">🇺🇸</span></li>
+                        <li data-lang="it"><span>Italiano</span><span class="flag">🇮🇹</span></li>
+                    </ul>
+                </div>
+                <span id="open-navbar"><i class="fa-solid fa-bars"></i></span>
+            </div>
         </div>
         <div id="container-nav">
             <div id="navbar-content">
                 <div id="dropdown">
-                    <span id="title-nav">Navegación</span>
+                    <span id="title-nav" data-i18n="nav.title">Navegación</span>
                     <span id="close-nav"><i class="fa-solid fa-xmark"></i></span>
                 </div>
                 <div class="container-nav">
                     <div class="navbar-brand">
                         <ul>
-                            <li><a href="#home"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                            <li><a href="#about"><i class="fa-regular fa-user"></i> Sobre mí</a></li>
-                            <li><a href="#projects"><i class="fa-solid fa-jet-fighter"></i> Projectos</a></li>
-                            <li><a href="#skils"><i class="fa-regular fa-chart-bar"></i> Habilidades</a></li>
-                            <li><a href="#contact"><i class="fa-regular fa-envelope"></i> Contacto</a></li>
+                            <li><a href="#home"><i class="fa-solid fa-house"></i> <span
+                                    data-i18n="nav.home">Inicio</span></a></li>
+                            <li><a href="#about"><i class="fa-regular fa-user"></i> <span
+                                    data-i18n="nav.about">Sobre mí</span></a></li>
+                            <li><a href="#projects"><i class="fa-solid fa-jet-fighter"></i> <span
+                                    data-i18n="nav.projects">Proyectos</span></a></li>
+                            <li><a href="#skils"><i class="fa-regular fa-chart-bar"></i> <span data-i18n="nav.skills">Habilidades</span></a>
+                            </li>
+                            <li><a href="#contact"><i class="fa-regular fa-envelope"></i> <span data-i18n="nav.contact">Contacto</span></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div id="follow">
-                    <span>Tambien me puedes encontrar en</span>
+                    <span data-i18n="nav.follow">También me puedes encontrar en</span>
                     <div class="social">
                         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
@@ -56,15 +76,19 @@
 
 <main>
     <section id="home">
-        <span id="greeting">Hola!, soy </span>
+        <span id="greeting" data-i18n="home.greeting">Hola!, soy </span>
         <h1 id="name">Daniel Rodríguez</h1>
-        <span id="job">Desarrollador tanto web/mobile con ganas de crear/mejorar experiencias y funcionalidades</span>
+        <span id="job" data-i18n="home.job">
+            Desarrollador web/mobile con ganas de crear y mejorar experiencias y funcionalidades
+        </span>
     </section>
     <section id="about">
-        <h2>SOBRE MÍ</h2>
+        <h2 data-i18n="about.title">SOBRE MÍ</h2>
+
         <div class="container-about">
             <i class="fa-solid fa-code"></i>
-            <p>Soy desarrollador Fullstack apasionado por aprender, explorar y mejorar constantemente a partir de cada
+            <p data-i18n="about.text">
+                Soy desarrollador Fullstack apasionado por aprender, explorar y mejorar constantemente a partir de cada
                 desafío. Considero cada error como una oportunidad de crecimiento, lo que me ha permitido desarrollar
                 una mentalidad perseverante, comprometida y orientada a soluciones creativas.
 
@@ -81,23 +105,23 @@
         </div>
     </section>
     <section id="skils">
-        <h2>Habilidades</h2>
-        <div class="container-habilidades">
-
-        </div>
+        <h2 data-i18n="skills.title">Habilidades</h2>
+        <div class="container-habilidades"></div>
     </section>
     <section id="contact">
         <div class="title-contact">
-            <h2>CONTACTO</h2>
-            <span>Hablemos de tu idea u proyecto</span>
-            <p>Completa el formulario y te responderé lo antes posible</p>
+            <h2 data-i18n="contact.title">CONTACTO</h2>
+            <span data-i18n="contact.subtitle">Hablemos de tu idea o proyecto</span>
+            <p data-i18n="contact.description">Completa el formulario y te responderé lo antes posible</p>
         </div>
         <div class="info-contact">
-            <h4>Información de contacto</h4>
+            <h4 data-i18n="contact.info">Información de contacto</h4>
             <ul>
                 <li>
                     <a href="mailto:danielsantiagorodriguez72@gmail.com" class="card">
-                        <div class="icon-container"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="icon-container">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
                         <div class="card-info">
                             <span class="card-title">Email</span>
                             <span class="card-content">danielsantiagorodriguez72@gmail.com</span>
@@ -106,9 +130,11 @@
                 </li>
                 <li>
                     <div class="card">
-                        <div class="icon-container"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="icon-container">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
                         <div class="card-info">
-                            <span class="card-title">Ubicación</span>
+                            <span class="card-title" data-i18n="contact.location">Ubicación</span>
                             <span class="card-content">Manacor, España</span>
                         </div>
                     </div>
@@ -117,34 +143,88 @@
         </div>
 
         <form id="contact-form">
-            <label for="nameuser"><i class="fa-regular fa-user"></i> Nombre</label>
-            <input type="text" id="nameuser" name="nameuser" placeholder="Ingresa tu nombre">
-            <span id="error-name" class="no-error">Introduce un nombre</span>
-            <label for="email"><i class="fa-regular fa-envelope"></i> Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com">
-            <span id="error-email" class="no-error">Introduce un correo válido</span>
-            <label for="subject"><i class="fa-regular fa-message"></i> Asunto <span
-                    class="subtext">(opcional)</span></label>
-            <input type="text" id="subject" name="subject" placeholder="¿Sobre que quieres hablar?">
-            <label for="message"><i class="fa-regular fa-message"></i> Mensaje</label>
-            <textarea id="message" placeholder="Cuentame sobre tu idea, proyecto, propuesta u consulta!"></textarea>
-            <span id="error-message" class="no-error">Es necesario escribir un mensaje</span>
-            <button class="send-form" id="send">
-                <i class="fa-regular fa-paper-plane"></i> Enviar mensaje
+            <label for="nameuser">
+                <i class="fa-regular fa-user"></i>
+                <span data-i18n="form.name">Nombre</span>
+            </label>
+
+            <input
+                    type="text"
+                    id="nameuser"
+                    name="nameuser"
+                    placeholder="Ingresa tu nombre"
+                    data-i18n-placeholder="form.namePlaceholder"
+            >
+
+            <span id="error-name" class="no-error" data-i18n="form.nameError">
+                Introduce un nombre
+            </span>
+
+            <label for="email">
+                <i class="fa-regular fa-envelope"></i>
+                <span data-i18n="form.email">Correo electrónico</span>
+            </label>
+
+            <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="tu@email.com"
+                    data-i18n-placeholder="form.emailPlaceholder"
+            >
+
+            <span id="error-email" class="no-error" data-i18n="form.emailError">
+                Introduce un correo válido
+            </span>
+
+            <label for="subject">
+                <i class="fa-regular fa-message"></i>
+                <span data-i18n="form.subject">Asunto</span>
+                <span class="subtext" data-i18n="form.optional">(opcional)</span>
+            </label>
+
+            <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="¿Sobre qué quieres hablar?"
+                    data-i18n-placeholder="form.subjectPlaceholder"
+            >
+
+            <label for="message">
+                <i class="fa-regular fa-message"></i>
+                <span data-i18n="form.message">Mensaje</span>
+            </label>
+
+            <textarea
+                    id="message"
+                    placeholder="Cuéntame sobre tu idea, proyecto, propuesta o consulta!"
+                    data-i18n-placeholder="form.messagePlaceholder"
+            ></textarea>
+
+            <span id="error-message" class="no-error" data-i18n="form.messageError">
+                Es necesario escribir un mensaje
+            </span>
+
+            <button class="send-form" id="send" type="submit">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span data-i18n="form.send">Enviar mensaje</span>
             </button>
         </form>
     </section>
 </main>
 
-<script>
+<script type="module">
     'use strict';
 
-    (() => {
-        addEvents();
+    import {TranslationController} from "./controller/TranslationController.js";
+
+    (async () => {
+        const translationController = new TranslationController();
+        await addEvents(translationController);
     })();
 
-
-    function addEvents() {
+    async function addEvents(translationController) {
         const buttonsOpenNav = document.querySelector('#open-navbar');
         const buttonCloseNavbar = document.querySelector('#close-nav');
 
@@ -158,7 +238,8 @@
         verifyUser();
         verifyEmail();
         verifyMessage();
-
+        languageSelectorEvent();
+        await translateEvent(translationController);
     }
 
     function toggleNavbar() {
@@ -257,7 +338,83 @@
         });
     }
 
+    function translateEvent(translationController) {
+        document.addEventListener("DOMContentLoaded", async () => {
+            const savedLanguage = localStorage.getItem("language") || "es";
 
+            document.querySelectorAll("[data-lang]").forEach(button => {
+                button.addEventListener("click", async () => {
+                    const language = button.dataset.lang;
+                    await loadLanguage(translationController, language);
+                });
+            });
+            await loadLanguage(translationController, savedLanguage);
+        });
+    }
+
+    async function loadLanguage(translationController, lang) {
+        const translations = await translationController.loadLanguage(lang);
+        applyTranslations(translations);
+
+        localStorage.setItem("language", lang);
+        document.documentElement.lang = lang;
+    }
+
+    function getTranslation(key, translations) {
+        return key.split(".").reduce((obj, item) => obj?.[item], translations);
+    }
+
+    function applyTranslations(translations) {
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+            const key = element.getAttribute("data-i18n");
+            const translation = getTranslation(key, translations);
+
+            if (translation) {
+                element.textContent = translation;
+            }
+        });
+
+        document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
+            const key = element.getAttribute("data-i18n-placeholder");
+            const translation = getTranslation(key, translations);
+
+            if (translation) {
+                element.setAttribute("placeholder", translation);
+            }
+        });
+    }
+
+    function languageSelectorEvent() {
+        const langBtn = document.getElementById("lang-btn");
+        const langMenu = document.getElementById("lang-menu");
+        const currentLang = document.getElementById("current-lang");
+
+        langBtn.addEventListener("click", () => {
+            langMenu.classList.toggle("hidden");
+        });
+
+        document.querySelectorAll("#lang-menu li").forEach(item => {
+            item.addEventListener("click", () => {
+                const lang = item.dataset.lang;
+
+                currentLang.textContent = lang.toUpperCase();
+                langMenu.classList.add("hidden");
+
+                applyTranslations(lang); // tu función existente
+            });
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!document.querySelector(".language-dropdown").contains(e.target)) {
+                langMenu.classList.add("hidden");
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedLang = localStorage.getItem("language") || "es";
+            currentLang.textContent = savedLang.toUpperCase();
+        });
+    }
 
 
 </script>

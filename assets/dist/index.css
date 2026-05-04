@@ -7,6 +7,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: regularFont, sans-serif;
 }
 
 body {
@@ -16,6 +17,10 @@ body {
 
 ul {
     list-style-type: none;
+}
+
+li{
+    font-size: 35px;
 }
 
 a{
@@ -31,10 +36,6 @@ span{
 i{
     color: #111111;
     font-size: 30px;
-}
-
-h1,h2,h3,h4,p,label,span{
-    font-family: regularFont, sans-serif;
 }
 
 h1 {

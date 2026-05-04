@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "title": "Navigazione",
+    "home": "Home",
+    "about": "Chi sono",
+    "projects": "Progetti",
+    "skills": "Competenze",
+    "contact": "Contatto",
+    "follow": "Puoi trovarmi anche su"
+  },
+  "home": {
+    "greeting": "Ciao!, sono ",
+    "job": "Sviluppatore web/mobile con voglia di creare e migliorare esperienze e funzionalità"
+  },
+  "about": {
+    "title": "CHI SONO",
+    "text": "Sono uno sviluppatore Fullstack appassionato di apprendimento, esplorazione e miglioramento continuo attraverso ogni sfida. Considero ogni errore come un'opportunità di crescita, il che mi ha permesso di sviluppare una mentalità perseverante, impegnata e orientata a soluzioni creative.\n\nIl mio approccio non si limita soltanto alle applicazioni web, ma comprende anche lo sviluppo mobile. Cerco di creare soluzioni efficienti che ottimizzino i processi, dando sempre priorità a un'esperienza utente intuitiva e a un design funzionale."
+  },
+  "education": {
+    "title": "FORMAZIONE E/O ESPERIENZA",
+    "degree1": "Diploma intermedio in Sistemi Microinformatici e Reti",
+    "degree2": "Diploma superiore in Sviluppo di Applicazioni Web",
+    "job1": "Ottimizzazione, implementazione e sviluppo di processi interni sia in ambienti web che mobile",
+    "current": "2024 - Attualmente"
+  },
+  "projects": {
+    "title": "Progetti"
+  },
+  "skills": {
+    "title": "Competenze"
+  },
+  "contact": {
+    "title": "CONTATTO",
+    "subtitle": "Parliamo della tua idea o del tuo progetto",
+    "description": "Compila il modulo e ti risponderò il prima possibile",
+    "info": "Informazioni di contatto",
+    "location": "Posizione"
+  },
+  "form": {
+    "name": "Nome",
+    "namePlaceholder": "Inserisci il tuo nome",
+    "nameError": "Inserisci un nome",
+    "email": "Indirizzo email",
+    "emailPlaceholder": "tua@email.com",
+    "emailError": "Inserisci un'email valida",
+    "subject": "Oggetto",
+    "optional": "(opzionale)",
+    "subjectPlaceholder": "Di cosa vuoi parlare?",
+    "message": "Messaggio",
+    "messagePlaceholder": "Raccontami la tua idea, progetto, proposta o richiesta!",
+    "messageError": "È necessario scrivere un messaggio",
+    "send": "Invia messaggio"
+  }
+}
