@@ -43,3 +43,42 @@
     justify-items: center;
     text-align: justify;
 }
+
+#education{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.program{
+    padding: 20px 60px;
+}
+
+.program>ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.program>ul>li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.program>ul>li>span{
+    text-align: center;
+}
+
+.center{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.title{
+    color: #8b8b8b;
+}
+
+.data-title{
+    color: #b9b9b9;
+}
