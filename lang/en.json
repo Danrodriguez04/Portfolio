@@ -50,5 +50,6 @@
     "messagePlaceholder": "Tell me about your idea, project, proposal or inquiry!",
     "messageError": "A message is required",
     "send": "Send message"
-  }
+  },
+  "rights": "Rights reserved"
 }

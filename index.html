@@ -243,7 +243,7 @@
 </main>
 
 <footer>
-    <span><i class="fa-regular fa-copyright"></i> Derechos reservados</span>
+    <i class="fa-regular fa-copyright"></i><span data-i18n="rights"> Derechos reservados</span>
 </footer>
 
 <script type="module">
@@ -292,7 +292,7 @@
         }
     }
 
-    function checkContactForm(){
+    function checkContactForm() {
         const nameUser = document.querySelector('#nameuser').value;
         const email = document.querySelector('#email').value.indexOf('@');
         const message = document.querySelector('#message').value;
@@ -300,11 +300,11 @@
 
         let submitOk = true;
 
-        if (nameUser.length < 1 || email === -1 || message.length < 1){
+        if (nameUser.length < 1 || email === -1 || message.length < 1) {
             submitOk = false
             sendButton.classList.add('error-form')
             sendButton.classList.remove('no-error-form')
-        }else {
+        } else {
             sendButton.classList.remove('error-form')
             sendButton.classList.add('no-error-form')
         }
@@ -313,17 +313,17 @@
         sendButton.disabled = submitOk;
     }
 
-    function verifyUser(){
+    function verifyUser() {
         const nameUser = document.querySelector('#nameuser');
         const errorName = document.querySelector('#error-name');
 
-        nameUser.addEventListener('input',(event) => {
+        nameUser.addEventListener('input', (event) => {
             const nameUserValue = event.target.value;
             console.log(nameUserValue);
-            if (nameUserValue.length < 1){
+            if (nameUserValue.length < 1) {
                 errorName.classList.add('error');
                 errorName.classList.remove('no-error');
-            }else{
+            } else {
                 errorName.classList.remove('error')
                 errorName.classList.add('no-error');
             }
@@ -332,17 +332,17 @@
         });
     }
 
-    function verifyEmail(){
+    function verifyEmail() {
         const email = document.querySelector('#email');
         const errorEmail = document.querySelector('#error-email');
 
-        email.addEventListener('input',(event) => {
+        email.addEventListener('input', (event) => {
             const emailValue = event.target.value.indexOf('@');
 
-            if (emailValue === -1){
+            if (emailValue === -1) {
                 errorEmail.classList.add('error');
                 errorEmail.classList.remove('no-error');
-            }else{
+            } else {
                 errorEmail.classList.remove('error')
                 errorEmail.classList.add('no-error');
             }
@@ -351,17 +351,17 @@
         });
     }
 
-    function verifyMessage(){
+    function verifyMessage() {
         const message = document.querySelector('#message');
         const errorMessage = document.querySelector('#error-message');
 
-        message.addEventListener('input',(event) => {
+        message.addEventListener('input', (event) => {
             const messageValue = event.target.value;
 
-            if (messageValue.length < 1){
+            if (messageValue.length < 1) {
                 errorMessage.classList.add('error');
                 errorMessage.classList.remove('no-error');
-            }else{
+            } else {
                 errorMessage.classList.remove('error');
                 errorMessage.classList.add('no-error');
             }

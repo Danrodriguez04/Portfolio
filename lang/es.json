@@ -50,5 +50,6 @@
     "messagePlaceholder": "Cuéntame sobre tu idea, proyecto, propuesta o consulta!",
     "messageError": "Es necesario escribir un mensaje",
     "send": "Enviar mensaje"
-  }
+  },
+  "rights": "Derechos reservados"
 }
