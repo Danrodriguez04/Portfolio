@@ -57,13 +57,14 @@
 .program>ul{
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 60px;
 }
 
 .program>ul>li{
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 15px;
 }
 
 .program>ul>li>span{
