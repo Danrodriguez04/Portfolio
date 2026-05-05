@@ -8,6 +8,8 @@
 
 #greeting{
     font-size: 40px;
+    color: #00bfa6;
+    font-weight: 600;
 }
 
 #job{
