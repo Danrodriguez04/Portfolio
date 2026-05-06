@@ -491,16 +491,22 @@
         const title = document.createElement('H4');
         const description = document.createElement('p');
         const button = document.createElement('A');
+        const iconButton = document.createElement('I')
+        const seeProject = document.createElement('p');
+
 
         card.className = 'card-project';
         image.src = `${project.getImageLocation()}`;
         console.log(project.getImageLocation());
         title.innerHTML = project.getName();
         description.innerHTML = project.getDescription();
-        button.innerHTML = 'Ver proyecto !';
-        button.href = '#'
+        button.href = '#';
         button.className = 'see-more';
+        iconButton.className = 'fa-solid fa-arrow-up-right-from-square';
+        seeProject.innerHTML = 'Ver proyecto';
 
+        button.append(iconButton);
+        button.append(seeProject);
         content.append(title);
         content.append(description);
         content.append(button);
