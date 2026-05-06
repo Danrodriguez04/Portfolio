@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/dist/bar-nav.css">
     <link rel="stylesheet" href="assets/dist/contact.css">
     <link rel="stylesheet" href="assets/dist/about-me.css">
+    <link rel="stylesheet" href="assets/dist/project-section.css">
     <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
     <link rel="icon" href="assets/favicon.png">
     <title>Portfolio</title>
@@ -21,7 +22,7 @@
     <nav class="navbar">
         <div id="mobile-nav">
             <a href="#home">
-                <img id="logo" src="/assets/favicon.png">
+                <img id="logo" src="/assets/favicon.png" alt="Logo">
                 <span>Daniel Rodríguez</span>
             </a>
 
@@ -129,12 +130,12 @@
         </div>
     </section>
     <section id="projects">
-        <h2 data-i18n="projects.title">Proyectos</h2>
-        <div class="container-projects"></div>
+        <h2 data-i18n="projects.title">PROYECTOS</h2>
+        <div id="project-list"></div>
     </section>
     <section id="skils">
         <h2 data-i18n="skills.title">Habilidades</h2>
-        <div class="container-habilidades"></div>
+        <div id="skills-list"></div>
     </section>
     <section id="contact">
         <div class="title-contact">
@@ -143,7 +144,7 @@
             <p data-i18n="contact.description">Completa el formulario y te responderé lo antes posible</p>
         </div>
         <div class="info-contact">
-            <h4 data-i18n="contact.info">Información de contacto</h4>
+            <h3 data-i18n="contact.info">Información de contacto</h3>
             <ul>
                 <li>
                     <a href="mailto:danielsantiagorodriguez72@gmail.com" class="card">
@@ -250,9 +251,14 @@
     'use strict';
 
     import {TranslationController} from "./controller/TranslationController.js";
+    import {ProjectController} from "./controller/ProjectController.js";
 
     (async () => {
         const translationController = new TranslationController();
+        const projectController = new ProjectController();
+        const projects = await projectController.findAllProjects();
+
+        drawProjects(projects);
         await addEvents(translationController);
     })();
 
@@ -446,6 +452,63 @@
             const savedLang = localStorage.getItem("language") || "es";
             currentLang.textContent = savedLang.toUpperCase();
         });
+    }
+
+    function drawProjects(projects) {
+        const projectContainer = document.querySelector('#project-list');
+        const skillsContainer = document.querySelector('#skills-list');
+        const skills = new Set();
+
+        for (const project of projects) {
+            createCardProject(project, projectContainer);
+            skills.add(...project.getSkills());
+        }
+
+        for (const skill of skills) {
+            createSkillSection(skill, skillsContainer);
+        }
+
+    }
+
+    function createSkillSection(skill, skillContainer) {
+        const containerSkill = document.createElement('DIV');
+        const iconSkill = document.createElement('LI')
+        const iconName = document.createElement('P');
+
+        iconSkill.classList.add(...skill.getClassIcon().split(' '), 'iconSkill');
+        iconName.innerHTML = skill.getName();
+
+        containerSkill.append(iconSkill, iconName);
+
+        skillContainer.append(containerSkill);
+    }
+
+    function createCardProject(project, projectContainer) {
+        const card = document.createElement('DIV');
+        const imageContainer = document.createElement('DIV');
+        const image = document.createElement('IMG');
+        const content = document.createElement('ARTICLE');
+        const title = document.createElement('H4');
+        const description = document.createElement('p');
+        const button = document.createElement('A');
+
+        card.className = 'card-project';
+        image.src = `${project.getImageLocation()}`;
+        console.log(project.getImageLocation());
+        title.innerHTML = project.getName();
+        description.innerHTML = project.getDescription();
+        button.innerHTML = 'Ver proyecto !';
+        button.href = '#'
+        button.className = 'see-more';
+
+        content.append(title);
+        content.append(description);
+        content.append(button);
+        imageContainer.append(image);
+        card.append(imageContainer);
+        card.append(content);
+
+        projectContainer.append(card);
     }
 
 

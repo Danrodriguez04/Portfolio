@@ -8,10 +8,8 @@ export class ProjectService{
         const headers = new Headers();
         headers.append("content-type", "application/json");
 
-        const response = await fetch('/assets/projects.json')/*,{
-            headers : headers,
-            method: 'GET'
-        });*/
+        const response = await fetch('../assets/projects.json')
+
         const projects = await response.json();
 
         return projects.map((json) => {

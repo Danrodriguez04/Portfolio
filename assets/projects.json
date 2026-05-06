@@ -1,22 +1,32 @@
-{
-  "profile": {
-    "id": "usr_001",
-    "fullName": "Juan Pérez",
-    "headline": "Full Stack Developer especializado en React y Node.js",
-    "description": "Desarrollador enfocado en construir aplicaciones web escalables y de alto rendimiento.",
-    "bio": "Tengo experiencia desarrollando productos digitales centrados en usuario, optimización y arquitectura limpia.",
-    "email": "juan@email.com",
-    "phone": "+34 600000000",
-    "location": {
-      "city": "Madrid",
-      "country": "España",
-      "remote": true
-    },
-    "avatarUrl": "https://example.com/avatar.jpg",
-    "website": "https://juan.dev",
-    "resumeUrl": "https://example.com/cv.pdf",
-    "status": "open_to_work",
-    "yearsOfExperience": 5
+[
+  {
+    "id": 1,
+    "name": "Personal Portfolio Website",
+    "description": "A modern responsive portfolio showcasing developer work, bio, and contact.",
+    "location": "Madrid, Spain",
+    "date": "2024-05-12",
+    "imageLocation": "/assets/img/portfolio.webp",
+    "status": "Completed",
+    "skills": [
+      { "name": "HTML", "classIcon": "fa-brands fa-html5", "type": "front" },
+      { "name": "CSS", "classIcon": "fa-brands fa-css3-alt", "type": "front" },
+      { "name": "JavaScript", "classIcon": "fa-brands fa-js", "type": "front" },
+      { "name": "UI/UX", "classIcon": "fa-solid fa-object-group", "type": "design" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Smart Home Controller",
+    "description": "Mobile app to manage smart home devices including lighting, temperature, and alarms.",
+    "location": "Remote",
+    "date": "2023-11-21",
+    "imageLocation": "/assets/img/smart_home.webp",
+    "status": "In Progress",
+    "skills": [
+      { "name": "Flutter", "classIcon": "fa-brands fa-android", "type": "mobile" },
+      { "name": "Firebase", "classIcon": "fa-solid fa-fire", "type": "back" },
+      { "name": "IoT", "classIcon": "fa-solid fa-network-wired", "type": "hardware" }
+    ]
   },
 
   "socialLinks": [
