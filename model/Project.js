@@ -5,16 +5,18 @@ export class Project{
     #location;
     #date;
     #imageLocation;
-    #status
+    #status;
+    #href;
     #skills;
 
-    constructor(name,description,location,date,imageLocation,status) {
+    constructor(name,description,location,date,imageLocation,status,href) {
         this.#name = name;
         this.#description = description;
         this.#location = location;
         this.#date = date;
         this.#imageLocation = imageLocation;
         this.#status = status;
+        this.#href = href;
     }
 
 
@@ -74,9 +76,17 @@ export class Project{
         this.#skills = value;
     }
 
+    getHref() {
+        return this.#href;
+    }
+
+    setHref(value) {
+        this.#href = value;
+    }
+
 
     static jsonToProject(json){
-        return new Project(json.name,json.description,json.location,json.date,json.imageLocation,json.status);
+        return new Project(json.name,json.description,json.location,json.date,json.imageLocation,json.status, json.href);
     }
 
 }

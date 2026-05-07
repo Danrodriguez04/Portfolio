@@ -24,7 +24,8 @@
     "current": "2024 - Actualmente"
   },
   "projects": {
-    "title": "Proyectos"
+    "title": "Proyectos",
+    "description": "Proyectos que reflejan mi aprendizaje y evolución como desarrollador."
   },
   "skills": {
     "title": "Habilidades"

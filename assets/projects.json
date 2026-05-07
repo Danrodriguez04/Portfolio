@@ -7,6 +7,7 @@
     "date": "2024-05-12",
     "imageLocation": "/assets/img/portfolio.webp",
     "status": "Completed",
+    "href": "#",
     "skills": [
       { "name": "HTML", "classIcon": "fa-brands fa-html5", "type": "front" },
       { "name": "CSS", "classIcon": "fa-brands fa-css3-alt", "type": "front" },
@@ -22,6 +23,7 @@
     "date": "2023-11-21",
     "imageLocation": "/assets/img/smart_home.webp",
     "status": "In Progress",
+    "href": "#",
     "skills": [
       { "name": "Flutter", "classIcon": "fa-brands fa-android", "type": "mobile" },
       { "name": "Firebase", "classIcon": "fa-solid fa-fire", "type": "back" },
@@ -36,6 +38,7 @@
     "date": "2024-02-09",
     "imageLocation": "/assets/img/inventory.webp",
     "status": "Planned",
+    "href": "#",
     "skills": [
       { "name": "React", "classIcon": "fa-brands fa-react", "type": "front" },
       { "name": "Node.js", "classIcon": "fa-brands fa-node-js", "type": "back" },
@@ -50,6 +53,7 @@
     "date": "2023-04-18",
     "imageLocation": "/assets/img/ecommerce.webp",
     "status": "Completed",
+    "href": "#",
     "skills": [
       { "name": "Next.js", "classIcon": "fa-brands fa-neos", "type": "full" },
       { "name": "PostgreSQL", "classIcon": "fa-solid fa-database", "type": "db" },
@@ -65,6 +69,7 @@
     "date": "2024-10-03",
     "imageLocation": "/assets/img/resume_scanner.webp",
     "status": "In Progress",
+    "href": "#",
     "skills": [
       { "name": "Python", "classIcon": "fa-brands fa-python", "type": "back" },
       { "name": "FastAPI", "classIcon": "fa-solid fa-rocket", "type": "back" },
@@ -80,6 +85,7 @@
     "date": "2023-12-30",
     "imageLocation": "/assets/img/car_rental.webp",
     "status": "Paused",
+    "href": "#",
     "skills": [
       { "name": "Java", "classIcon": "fa-brands fa-java", "type": "back" },
       { "name": "Spring Boot", "classIcon": "fa-solid fa-leaf", "type": "back" },
@@ -94,6 +100,7 @@
     "date": "2024-01-11",
     "imageLocation": "/assets/img/fitness.webp",
     "status": "Completed",
+    "href": "#",
     "skills": [
       { "name": "Kotlin", "classIcon": "fa-solid fa-mobile", "type": "mobile" },
       { "name": "SQLite", "classIcon": "fa-solid fa-database", "type": "db" },
@@ -108,6 +115,7 @@
     "date": "2022-07-27",
     "imageLocation": "/assets/img/restaurant.webp",
     "status": "Archived",
+    "href": "#",
     "skills": [
       { "name": "Vue.js", "classIcon": "fa-brands fa-vuejs", "type": "front" },
       { "name": "PHP", "classIcon": "fa-brands fa-php", "type": "back" },

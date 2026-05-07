@@ -131,6 +131,7 @@
     </section>
     <section id="projects">
         <h2 data-i18n="projects.title">PROYECTOS</h2>
+        <span id="project-description" data-i18n="projects.description">Proyectos que reflejan mi aprendizaje y evolución como desarrollador.</span>
         <div id="project-list"></div>
     </section>
     <section id="skils">
@@ -315,7 +316,6 @@
             sendButton.classList.add('no-error-form')
         }
 
-        console.log(submitOk);
         sendButton.disabled = submitOk;
     }
 
@@ -325,7 +325,6 @@
 
         nameUser.addEventListener('input', (event) => {
             const nameUserValue = event.target.value;
-            console.log(nameUserValue);
             if (nameUserValue.length < 1) {
                 errorName.classList.add('error');
                 errorName.classList.remove('no-error');
@@ -486,6 +485,8 @@
     function createCardProject(project, projectContainer) {
         const card = document.createElement('DIV');
         const imageContainer = document.createElement('DIV');
+        const overlay = document.createElement('DIV');
+        const techList = document.createElement('DIV');
         const image = document.createElement('IMG');
         const content = document.createElement('ARTICLE');
         const title = document.createElement('H4');
@@ -497,13 +498,24 @@
 
         card.className = 'card-project';
         image.src = `${project.getImageLocation()}`;
-        console.log(project.getImageLocation());
+        overlay.className = "overlay";
+        techList.className = "tech-list";
         title.innerHTML = project.getName();
         description.innerHTML = project.getDescription();
-        button.href = '#';
+        button.href = project.getHref();
         button.className = 'see-more';
         iconButton.className = 'fa-solid fa-arrow-up-right-from-square';
         seeProject.innerHTML = 'Ver proyecto';
+
+        project.getSkills().forEach(tech => {
+            const techItem = document.createElement('SPAN');
+            const iconTech = document.createElement('I');
+            iconTech.className = tech.getClassIcon();
+            techItem.append(iconTech);
+            techList.append(techItem);
+        });
+
+        overlay.append(techList);
 
         button.append(iconButton);
         button.append(seeProject);
@@ -511,6 +523,7 @@
         content.append(description);
         content.append(button);
         imageContainer.append(image);
+        imageContainer.append(overlay);
         card.append(imageContainer);
         card.append(content);
 
