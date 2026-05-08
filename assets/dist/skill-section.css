@@ -1,0 +1,44 @@
+#skills-list{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.skill-category{
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.skill-card{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    align-items: center;
+    row-gap: 15px;
+    justify-content: center;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: solid 1px #b9b9b9;
+}
+
+.skill-card>i{
+    font-size: 60px;
+}
+
+.skill-card>p{
+    text-align: center;
+}
+
+
+
+
+
