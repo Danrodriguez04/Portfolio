@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
-    <meta name="keywords" content="Web Developer, Mobile Developer, Portfolio Daniel Rodriguez">
     <meta name="author" content="Daniel Rodriguez">
+    <meta name="description" content="Portfolio Daniel Rodriguez" data-i18n-content="meta.description">
+    <meta name="keywords" content="Web Developer, Mobile Developer, Portfolio Daniel Rodriguez" data-i18n-content="meta.keywords">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Portfolio Daniel Rodriguez">
-
     <link rel="stylesheet" href="assets/dist/index.css">
     <link rel="stylesheet" href="assets/dist/bar-nav.css">
     <link rel="stylesheet" href="assets/dist/contact.css">
@@ -16,7 +15,7 @@
     <link rel="stylesheet" href="assets/dist/skill-section.css">
     <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
     <link rel="icon" href="assets/favicon.png">
-    <title>Portfolio</title>
+    <title data-i18n="meta.title">Portfolio</title>
 </head>
 <body>
 <header>
@@ -380,18 +379,19 @@
         });
     }
 
-    function translateEvent(translationController) {
-        document.addEventListener("DOMContentLoaded", async () => {
-            const savedLanguage = localStorage.getItem("language") || "es";
+    async function translateEvent(translationController) {
+        const currentLang = document.getElementById("current-lang");
+        const savedLanguage = localStorage.getItem("language") || "es";
 
-            document.querySelectorAll("[data-lang]").forEach(button => {
-                button.addEventListener("click", async () => {
-                    const language = button.dataset.lang;
-                    await loadLanguage(translationController, language);
-                });
+        for (const button of document.querySelectorAll("[data-lang]")) {
+            button.addEventListener("click", async () => {
+                const language = button.dataset.lang;
+                await loadLanguage(translationController, language);
             });
-            await loadLanguage(translationController, savedLanguage);
-        });
+        }
+
+        currentLang.textContent = savedLanguage.toUpperCase();
+        await loadLanguage(translationController, savedLanguage);
     }
 
     async function loadLanguage(translationController, lang) {
@@ -424,6 +424,15 @@
                 element.setAttribute("placeholder", translation);
             }
         });
+        document.querySelectorAll("[data-i18n-content]").forEach(element => {
+            const key = element.getAttribute("data-i18n-content");
+            const translation = getTranslation(key, translations);
+
+            if (translation) {
+                element.setAttribute("content", translation);
+            }
+        });
+
     }
 
     function languageSelectorEvent() {
@@ -450,11 +459,6 @@
             if (!document.querySelector(".language-dropdown").contains(e.target)) {
                 langMenu.classList.add("hidden");
             }
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const savedLang = localStorage.getItem("language") || "es";
-            currentLang.textContent = savedLang.toUpperCase();
         });
     }
 
@@ -520,12 +524,15 @@
         image.src = `${project.getImageLocation()}`;
         overlay.className = "overlay";
         techList.className = "tech-list";
-        title.innerHTML = project.getName();
-        description.innerHTML = project.getDescription();
         button.href = project.getHref();
         button.className = 'see-more';
         iconButton.className = 'fa-solid fa-arrow-up-right-from-square';
-        seeProject.innerHTML = 'Ver proyecto';
+
+        const projectKey = project.getId();
+
+        title.dataset.i18n = `projects.items.${projectKey}.name`;
+        description.dataset.i18n = `projects.items.${projectKey}.description`;
+        seeProject.dataset.i18n = `projects.seeProject`;
 
         project.getSkills().forEach(tech => {
             const techItem = document.createElement('SPAN');

@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Portfolio | Daniel Rodríguez",
+    "description": "Portfolio di Daniel Rodríguez, sviluppatore web e mobile junior specializzato in JavaScript, Java, Flutter e Angular.",
+    "keywords": "sviluppatore web, sviluppatore mobile, portfolio, JavaScript, Java, Flutter, Angular"
+  },
   "nav": {
     "title": "Navigazione",
     "home": "Home",
@@ -25,7 +30,14 @@
   },
   "projects": {
     "title": "Progetti",
-    "description": "Progetti che riflettono la mia crescita e il mio apprendimento come sviluppatore."
+    "description": "Progetti che riflettono la mia crescita e il mio apprendimento come sviluppatore.",
+    "seeProject": "Vedi progetto",
+    "items": {
+      "1": {
+        "name": "Portfolio personale",
+        "description": "Portfolio web realizzato con HTML, CSS e JavaScript, focalizzato sui fondamenti dello sviluppo frontend."
+      }
+    }
   },
   "skills": {
     "title": "Competenze"
