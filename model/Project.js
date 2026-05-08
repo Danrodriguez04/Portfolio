@@ -1,5 +1,6 @@
 export class Project{
 
+    #id;
     #name;
     #description;
     #location;
@@ -9,7 +10,8 @@ export class Project{
     #href;
     #skills;
 
-    constructor(name,description,location,date,imageLocation,status,href) {
+    constructor(id,name,description,location,date,imageLocation,status,href) {
+        this.#id = id;
         this.#name = name;
         this.#description = description;
         this.#location = location;
@@ -19,6 +21,14 @@ export class Project{
         this.#href = href;
     }
 
+
+    getId() {
+        return this.#id;
+    }
+
+    setId(value) {
+        this.#id = value;
+    }
 
     getName() {
         return this.#name;
@@ -86,7 +96,7 @@ export class Project{
 
 
     static jsonToProject(json){
-        return new Project(json.name,json.description,json.location,json.date,json.imageLocation,json.status, json.href);
+        return new Project(json.id, json.name,json.description,json.location,json.date,json.imageLocation,json.status, json.href);
     }
 
 }
