@@ -253,13 +253,17 @@
 
     import {TranslationController} from "./controller/TranslationController.js";
     import {ProjectController} from "./controller/ProjectController.js";
+    import {SkillController} from "./controller/SkillController.js";
 
     (async () => {
         const translationController = new TranslationController();
         const projectController = new ProjectController();
+        const skillController = new SkillController();
         const projects = await projectController.findAllProjects();
+        const skills = await skillController.findAll();
 
         drawProjects(projects);
+        drawSkills(skills);
         await addEvents(translationController);
     })();
 
@@ -455,31 +459,46 @@
 
     function drawProjects(projects) {
         const projectContainer = document.querySelector('#project-list');
-        const skillsContainer = document.querySelector('#skills-list');
-        const skills = new Set();
 
         for (const project of projects) {
             createCardProject(project, projectContainer);
-            skills.add(...project.getSkills());
         }
-
-        for (const skill of skills) {
-            createSkillSection(skill, skillsContainer);
-        }
-
     }
 
-    function createSkillSection(skill, skillContainer) {
-        const containerSkill = document.createElement('DIV');
-        const iconSkill = document.createElement('LI')
-        const iconName = document.createElement('P');
+    function drawSkills(skills) {
+        const skillContainer = document.querySelector('#skills-list');
+        const categories = new Set;
+        skills.forEach((skill)=>{
+            categories.add(skill.getType());
+        });
 
-        iconSkill.classList.add(...skill.getClassIcon().split(' '), 'iconSkill');
-        iconName.innerHTML = skill.getName();
+        categories.forEach((category)=>{
+            const categorySkill = document.createElement('DIV');
+            const categoryTitle = document.createElement('H3');
+            const skillsContainer = document.createElement('DIV');
+            categorySkill.classList.add("skill-category");
+            skillsContainer.classList.add('skill-container', category);
+            categoryTitle.innerHTML= category.toUpperCase();
+            categorySkill.append(categoryTitle);
+            categorySkill.append(skillsContainer);
+            skillContainer.append(categorySkill);
+        })
 
-        containerSkill.append(iconSkill, iconName);
 
-        skillContainer.append(containerSkill);
+        for (const skill of skills) {
+            const categorySkill = document.querySelector(`.${skill.getType()}`);
+
+            const containerSkill = document.createElement('DIV');
+            const iconSkill = document.createElement('I');
+            const iconName = document.createElement('P');
+
+            containerSkill.className = 'skill-card';
+            iconSkill.classList.add(...skill.getClassIcon().split(' '), 'iconSkill');
+            iconName.innerHTML = skill.getName();
+
+            containerSkill.append(iconSkill, iconName);
+            categorySkill.append(containerSkill);
+        }
     }
 
     function createCardProject(project, projectContainer) {
