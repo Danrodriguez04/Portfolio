@@ -1,5 +1,6 @@
 
 .navbar{
+    position: relative;
     display: flex;
     padding: 50px 40px;
     border-bottom: solid 1px #e5e5e5;
