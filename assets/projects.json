@@ -1,126 +1,382 @@
-[
-  {
-    "id": 1,
-    "name": "Personal Portfolio Website",
-    "description": "A modern responsive portfolio showcasing developer work, bio, and contact.",
-    "location": "Madrid, Spain",
-    "date": "2024-05-12",
-    "imageLocation": "/assets/img/portfolio.webp",
-    "status": "Completed",
-    "href": "#",
-    "skills": [
-      { "name": "HTML", "classIcon": "fa-brands fa-html5", "type": "front" },
-      { "name": "CSS", "classIcon": "fa-brands fa-css3-alt", "type": "front" },
-      { "name": "JavaScript", "classIcon": "fa-brands fa-js", "type": "front" },
-      { "name": "UI/UX", "classIcon": "fa-solid fa-object-group", "type": "design" }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Smart Home Controller",
-    "description": "Mobile app to manage smart home devices including lighting, temperature, and alarms.",
-    "location": "Remote",
-    "date": "2023-11-21",
-    "imageLocation": "/assets/img/smart_home.webp",
-    "status": "In Progress",
-    "href": "#",
-    "skills": [
-      { "name": "Flutter", "classIcon": "fa-brands fa-android", "type": "mobile" },
-      { "name": "Firebase", "classIcon": "fa-solid fa-fire", "type": "back" },
-      { "name": "IoT", "classIcon": "fa-solid fa-network-wired", "type": "hardware" }
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Inventory Tracker Dashboard",
-    "description": "Real-time warehouse inventory tracker with analytics and reports.",
-    "location": "Buenos Aires, Argentina",
-    "date": "2024-02-09",
-    "imageLocation": "/assets/img/inventory.webp",
-    "status": "Planned",
-    "href": "#",
-    "skills": [
-      { "name": "React", "classIcon": "fa-brands fa-react", "type": "front" },
-      { "name": "Node.js", "classIcon": "fa-brands fa-node-js", "type": "back" },
-      { "name": "MongoDB", "classIcon": "fa-solid fa-database", "type": "db" }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "E-Commerce Platform",
-    "description": "Full online store with cart system, payment handling, and stock synchronization.",
-    "location": "Mexico City, Mexico",
-    "date": "2023-04-18",
-    "imageLocation": "/assets/img/ecommerce.webp",
-    "status": "Completed",
-    "href": "#",
-    "skills": [
-      { "name": "Next.js", "classIcon": "fa-brands fa-neos", "type": "full" },
-      { "name": "PostgreSQL", "classIcon": "fa-solid fa-database", "type": "db" },
-      { "name": "Stripe", "classIcon": "fa-brands fa-stripe", "type": "back" },
-      { "name": "REST API", "classIcon": "fa-solid fa-plug", "type": "back" }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "AI Resume Scanner",
-    "description": "Tool that scans resumes and matches skills to job openings using NLP.",
-    "location": "Remote",
-    "date": "2024-10-03",
-    "imageLocation": "/assets/img/resume_scanner.webp",
-    "status": "In Progress",
-    "href": "#",
-    "skills": [
-      { "name": "Python", "classIcon": "fa-brands fa-python", "type": "back" },
-      { "name": "FastAPI", "classIcon": "fa-solid fa-rocket", "type": "back" },
-      { "name": "TensorFlow", "classIcon": "fa-solid fa-brain", "type": "ml" },
-      { "name": "Docker", "classIcon": "fa-brands fa-docker", "type": "devops" }
-    ]
-  },
-  {
-    "id": 6,
-    "name": "Car Rental Management System",
-    "description": "System for managing car reservations, fleet maintenance, and user history.",
-    "location": "Bogotá, Colombia",
-    "date": "2023-12-30",
-    "imageLocation": "/assets/img/car_rental.webp",
-    "status": "Paused",
-    "href": "#",
-    "skills": [
-      { "name": "Java", "classIcon": "fa-brands fa-java", "type": "back" },
-      { "name": "Spring Boot", "classIcon": "fa-solid fa-leaf", "type": "back" },
-      { "name": "MySQL", "classIcon": "fa-solid fa-database", "type": "db" }
-    ]
-  },
-  {
-    "id": 7,
-    "name": "Fitness Tracking App",
-    "description": "App for logging workouts, tracking metrics, and following fitness plans.",
-    "location": "San José, Costa Rica",
-    "date": "2024-01-11",
-    "imageLocation": "/assets/img/fitness.webp",
-    "status": "Completed",
-    "href": "#",
-    "skills": [
-      { "name": "Kotlin", "classIcon": "fa-solid fa-mobile", "type": "mobile" },
-      { "name": "SQLite", "classIcon": "fa-solid fa-database", "type": "db" },
-      { "name": "Figma", "classIcon": "fa-brands fa-figma", "type": "design" }
-    ]
-  },
-  {
-    "id": 8,
-    "name": "Restaurant Order Dashboard",
-    "description": "Table and order management dashboard for restaurants with real-time updates.",
-    "location": "Lima, Peru",
-    "date": "2022-07-27",
-    "imageLocation": "/assets/img/restaurant.webp",
-    "status": "Archived",
-    "href": "#",
-    "skills": [
-      { "name": "Vue.js", "classIcon": "fa-brands fa-vuejs", "type": "front" },
-      { "name": "PHP", "classIcon": "fa-brands fa-php", "type": "back" },
-      { "name": "MariaDB", "classIcon": "fa-solid fa-database", "type": "db" },
-      { "name": "WebSockets", "classIcon": "fa-solid fa-wifi", "type": "back" }
-    ]
-  }
-]
+{
+  "skills": [
+    {
+      "name": "HTML5",
+      "classIcon": "fa-brands fa-html5",
+      "type": "front"
+    },
+    {
+      "name": "CSS",
+      "classIcon": "fa-brands fa-css3-alt",
+      "type": "front"
+    },
+    {
+      "name": "SASS",
+      "classIcon": "fa-brands fa-sass",
+      "type": "front"
+    },
+    {
+      "name": "JavaScript",
+      "classIcon": "fa-brands fa-js",
+      "type": "front"
+    },
+    {
+      "name": "TypeScript",
+      "classIcon": "fa-brands fa-typescript",
+      "type": "front"
+    },
+    {
+      "name": "Angular",
+      "classIcon": "fa-brands fa-angular",
+      "type": "front"
+    },
+    {
+      "name": "Vue.js",
+      "classIcon": "fa-brands fa-vuejs",
+      "type": "front"
+    },
+    {
+      "name": "Quasar",
+      "classIcon": "fa-solid fa-bolt",
+      "type": "front"
+    },
+    {
+      "name": "jQuery",
+      "classIcon": "fa-solid fa-code",
+      "type": "front"
+    },
+    {
+      "name": "Java",
+      "classIcon": "fa-brands fa-java",
+      "type": "back"
+    },
+    {
+      "name": "Spring Framework",
+      "classIcon": "fa-solid fa-leaf",
+      "type": "back"
+    },
+    {
+      "name": "Spring MVC",
+      "classIcon": "fa-solid fa-leaf",
+      "type": "back"
+    },
+    {
+      "name": "Hibernate",
+      "classIcon": "fa-solid fa-database",
+      "type": "back"
+    },
+    {
+      "name": "PHP",
+      "classIcon": "fa-brands fa-php",
+      "type": "back"
+    },
+    {
+      "name": "Laravel",
+      "classIcon": "fa-brands fa-laravel",
+      "type": "back"
+    },
+    {
+      "name": "Node.js",
+      "classIcon": "fa-brands fa-node-js",
+      "type": "back"
+    },
+    {
+      "name": "jsonwebtoken",
+      "classIcon": "fa-solid fa-key",
+      "type": "back"
+    },
+    {
+      "name": "SQL",
+      "classIcon": "fa-solid fa-database",
+      "type": "database"
+    },
+    {
+      "name": "Microsoft SQL Server",
+      "classIcon": "fa-solid fa-database",
+      "type": "database"
+    },
+    {
+      "name": "Git",
+      "classIcon": "fa-brands fa-git-alt",
+      "type": "tools"
+    },
+    {
+      "name": "GitHub",
+      "classIcon": "fa-brands fa-github",
+      "type": "tools"
+    },
+    {
+      "name": "Docker",
+      "classIcon": "fa-brands fa-docker",
+      "type": "tools"
+    },
+    {
+      "name": "npm",
+      "classIcon": "fa-brands fa-npm",
+      "type": "tools"
+    },
+    {
+      "name": "AWS",
+      "classIcon": "fa-brands fa-aws",
+      "type": "cloud"
+    },
+    {
+      "name": "S3",
+      "classIcon": "fa-solid fa-cloud",
+      "type": "cloud"
+    },
+    {
+      "name": "CloudFront",
+      "classIcon": "fa-solid fa-cloud",
+      "type": "cloud"
+    },
+    {
+      "name": "Dart",
+      "classIcon": "fa-brands fa-dart-lang",
+      "type": "mobile"
+    },
+    {
+      "name": "Flutter",
+      "classIcon": "fa-brands fa-flutter",
+      "type": "mobile"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Personal Portfolio Website",
+      "description": "A modern responsive portfolio showcasing developer work, bio, and contact.",
+      "location": "Madrid, Spain",
+      "date": "2024-05-12",
+      "imageLocation": "/assets/img/portfolio.webp",
+      "status": "Completed",
+      "href": "#",
+      "skills": [
+        {
+          "name": "HTML",
+          "classIcon": "fa-brands fa-html5",
+          "type": "front"
+        },
+        {
+          "name": "CSS",
+          "classIcon": "fa-brands fa-css3-alt",
+          "type": "front"
+        },
+        {
+          "name": "JavaScript",
+          "classIcon": "fa-brands fa-js",
+          "type": "front"
+        },
+        {
+          "name": "UI/UX",
+          "classIcon": "fa-solid fa-object-group",
+          "type": "design"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Smart Home Controller",
+      "description": "Mobile app to manage smart home devices including lighting, temperature, and alarms.",
+      "location": "Remote",
+      "date": "2023-11-21",
+      "imageLocation": "/assets/img/smart_home.webp",
+      "status": "In Progress",
+      "href": "#",
+      "skills": [
+        {
+          "name": "Flutter",
+          "classIcon": "fa-brands fa-android",
+          "type": "mobile"
+        },
+        {
+          "name": "Firebase",
+          "classIcon": "fa-solid fa-fire",
+          "type": "back"
+        },
+        {
+          "name": "IoT",
+          "classIcon": "fa-solid fa-network-wired",
+          "type": "hardware"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Inventory Tracker Dashboard",
+      "description": "Real-time warehouse inventory tracker with analytics and reports.",
+      "location": "Buenos Aires, Argentina",
+      "date": "2024-02-09",
+      "imageLocation": "/assets/img/inventory.webp",
+      "status": "Planned",
+      "href": "#",
+      "skills": [
+        {
+          "name": "React",
+          "classIcon": "fa-brands fa-react",
+          "type": "front"
+        },
+        {
+          "name": "Node.js",
+          "classIcon": "fa-brands fa-node-js",
+          "type": "back"
+        },
+        {
+          "name": "MongoDB",
+          "classIcon": "fa-solid fa-database",
+          "type": "db"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "E-Commerce Platform",
+      "description": "Full online store with cart system, payment handling, and stock synchronization.",
+      "location": "Mexico City, Mexico",
+      "date": "2023-04-18",
+      "imageLocation": "/assets/img/ecommerce.webp",
+      "status": "Completed",
+      "href": "#",
+      "skills": [
+        {
+          "name": "Next.js",
+          "classIcon": "fa-brands fa-neos",
+          "type": "full"
+        },
+        {
+          "name": "PostgreSQL",
+          "classIcon": "fa-solid fa-database",
+          "type": "db"
+        },
+        {
+          "name": "Stripe",
+          "classIcon": "fa-brands fa-stripe",
+          "type": "back"
+        },
+        {
+          "name": "REST API",
+          "classIcon": "fa-solid fa-plug",
+          "type": "back"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "AI Resume Scanner",
+      "description": "Tool that scans resumes and matches skills to job openings using NLP.",
+      "location": "Remote",
+      "date": "2024-10-03",
+      "imageLocation": "/assets/img/resume_scanner.webp",
+      "status": "In Progress",
+      "href": "#",
+      "skills": [
+        {
+          "name": "Python",
+          "classIcon": "fa-brands fa-python",
+          "type": "back"
+        },
+        {
+          "name": "FastAPI",
+          "classIcon": "fa-solid fa-rocket",
+          "type": "back"
+        },
+        {
+          "name": "TensorFlow",
+          "classIcon": "fa-solid fa-brain",
+          "type": "ml"
+        },
+        {
+          "name": "Docker",
+          "classIcon": "fa-brands fa-docker",
+          "type": "devops"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Car Rental Management System",
+      "description": "System for managing car reservations, fleet maintenance, and user history.",
+      "location": "Bogotá, Colombia",
+      "date": "2023-12-30",
+      "imageLocation": "/assets/img/car_rental.webp",
+      "status": "Paused",
+      "href": "#",
+      "skills": [
+        {
+          "name": "Java",
+          "classIcon": "fa-brands fa-java",
+          "type": "back"
+        },
+        {
+          "name": "Spring Boot",
+          "classIcon": "fa-solid fa-leaf",
+          "type": "back"
+        },
+        {
+          "name": "MySQL",
+          "classIcon": "fa-solid fa-database",
+          "type": "db"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Fitness Tracking App",
+      "description": "App for logging workouts, tracking metrics, and following fitness plans.",
+      "location": "San José, Costa Rica",
+      "date": "2024-01-11",
+      "imageLocation": "/assets/img/fitness.webp",
+      "status": "Completed",
+      "href": "#",
+      "skills": [
+        {
+          "name": "Kotlin",
+          "classIcon": "fa-solid fa-mobile",
+          "type": "mobile"
+        },
+        {
+          "name": "SQLite",
+          "classIcon": "fa-solid fa-database",
+          "type": "db"
+        },
+        {
+          "name": "Figma",
+          "classIcon": "fa-brands fa-figma",
+          "type": "design"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Restaurant Order Dashboard",
+      "description": "Table and order management dashboard for restaurants with real-time updates.",
+      "location": "Lima, Peru",
+      "date": "2022-07-27",
+      "imageLocation": "/assets/img/restaurant.webp",
+      "status": "Archived",
+      "href": "#",
+      "skills": [
+        {
+          "name": "Vue.js",
+          "classIcon": "fa-brands fa-vuejs",
+          "type": "front"
+        },
+        {
+          "name": "PHP",
+          "classIcon": "fa-brands fa-php",
+          "type": "back"
+        },
+        {
+          "name": "MariaDB",
+          "classIcon": "fa-solid fa-database",
+          "type": "db"
+        },
+        {
+          "name": "WebSockets",
+          "classIcon": "fa-solid fa-wifi",
+          "type": "back"
+        }
+      ]
+    }
+  ]
+}

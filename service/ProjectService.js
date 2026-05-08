@@ -5,14 +5,11 @@ export class ProjectService{
 
 
     async findAllProjects(){
-        const headers = new Headers();
-        headers.append("content-type", "application/json");
-
         const response = await fetch('../assets/projects.json')
 
         const projects = await response.json();
 
-        return projects.map((json) => {
+        return projects.projects.map((json) => {
             let project = Project.jsonToProject(json);
             const skills = json.skills.map(j => Skill.jsonToSkill(j));
             project.setSkills(skills);
