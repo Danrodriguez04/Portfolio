@@ -1,7 +1,7 @@
 #skills-list{
     display: flex;
     flex-direction: column;
-    padding: 30px 0;
+    padding: 15px 0;
 }
 
 .skill-category{
@@ -13,9 +13,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 10px;
     justify-content: center;
-    padding: 30px 0;
+    padding: 15px 0;
 }
 
 .skill-card{
@@ -25,13 +25,13 @@
     align-items: center;
     row-gap: 15px;
     justify-content: center;
-    padding: 40px 20px;
-    border-radius: 20px;
+    padding: 20px 5px;
+    border-radius: 16px;
     border: solid 1px #b9b9b9;
 }
 
 .skill-card>i{
-    font-size: 60px;
+    font-size: 30px;
 }
 
 .skill-card>p{

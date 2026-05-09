@@ -1,15 +1,14 @@
 #projects{
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 15px;
 }
 
 #project-list{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 70px;
-    column-gap: 70px;
+    row-gap: 30px;
 }
 
 #project-description{
@@ -18,7 +17,7 @@
 
 .card-project {
     flex-basis: 46%;
-    height: 800px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     border: solid rgba(0, 0, 0, 0.35) 1px;
@@ -31,7 +30,7 @@
 .card-project>div:nth-child(1){
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -39,8 +38,8 @@
     object-fit: cover;
     object-position: center;
     width: 100%;
-    opacity: 0.85;
     height: 100%;
+    opacity: 0.85;
     transition: transform .3s ease, filter .3s ease, opacity .3s ease;
 }
 
@@ -48,8 +47,8 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 50px 50px;
-    row-gap: 30px;
+    padding: 25px 25px;
+    row-gap: 15px;
 }
 
 .card-project>article:nth-child(2)>h4{
@@ -58,13 +57,13 @@
 
 .card-project>article:nth-child(2)>p{
     color: #7a7a7a;
-    line-height: 50px;
+    line-height: 25px;
 }
 
 .card-project>article:nth-child(2)>a{
     display: flex;
     flex-direction: row;
-    column-gap: 15px;
+    column-gap: 8px;
     align-items: center;
 }
 
@@ -83,12 +82,13 @@
 .tech-list{
     display: flex;
     flex-direction: row;
-    column-gap: 10px;
+    column-gap: 7px;
+    flex-wrap: wrap;
 }
 .tech-list>span {
     font-size: 14px;
     font-weight: 500;
-    padding: 12px 12px;
+    padding: 6px 6px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.14);
     border: 1px solid rgba(255, 255, 255, 0.25);
