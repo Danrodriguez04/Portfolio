@@ -272,13 +272,14 @@
         const buttonCloseNavbar = document.querySelector('#close-nav');
 
         buttonsOpenNav.addEventListener('click', () => {
-            toggleNavbar();
-        });
-        buttonCloseNavbar.addEventListener('click', () => {
-            toggleNavbar();
+            openNavbar();
         });
 
-        scrollNavbar();
+        buttonCloseNavbar.addEventListener('click', () => {
+            closeNavbar();
+        });
+
+        setupNavbarEvents();
         verifyUser();
         verifyEmail();
         verifyMessage();
@@ -286,34 +287,43 @@
         await translateEvent(translationController);
     }
 
-    function scrollNavbar(){
+    function setupNavbarEvents(){
         window.addEventListener('scroll', () => {
             const mobileNav = document.querySelector('#mobile-nav');
 
-            if (window.scrollY > 50) {
+            if (window.scrollY > 30) {
                 mobileNav.classList.add('scrolled');
             } else {
                 mobileNav.classList.remove('scrolled');
             }
         });
-    }
 
-    function toggleNavbar() {
-        const navbar = document.querySelector('#container-nav');
-        const mainContainer = document.querySelector('main');
+        document.addEventListener("click", (event) => {
+            const navbar = document.querySelector('#container-nav');
+            const navbarContent = document.querySelector('#navbar-content');
+            const openButton = document.querySelector('#open-navbar');
 
-        document.querySelector("#container-nav").addEventListener("click", (event) => {
-            event.stopPropagation();
+            const isClickInside = navbarContent.contains(event.target);
+            const isClickOpenButton = openButton.contains(event.target);
+
+            if (navbar.classList.contains('is-active') && !isClickInside && !isClickOpenButton) {
+                closeNavbar();
+            }
         });
 
+        document.querySelectorAll("#navbar-content a").forEach(link => {
+            link.addEventListener("click", closeNavbar);
+        });
+    }
 
-        if (navbar.classList.contains('is-active') && mainContainer.classList.contains('is-active')) {
-            navbar.classList.remove('is-active');
-            mainContainer.classList.remove('is-active');
-        } else {
-            navbar.classList.add('is-active');
-            mainContainer.classList.add('is-active');
-        }
+    function openNavbar() {
+        document.querySelector('#container-nav').classList.add('is-active');
+        document.querySelector('main').classList.add('is-active');
+    }
+
+    function closeNavbar(){
+        document.querySelector('#container-nav').classList.remove('is-active');
+        document.querySelector('main').classList.remove('is-active');
     }
 
     function checkContactForm() {
