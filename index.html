@@ -278,11 +278,24 @@
             toggleNavbar();
         });
 
+        scrollNavbar();
         verifyUser();
         verifyEmail();
         verifyMessage();
         languageSelectorEvent();
         await translateEvent(translationController);
+    }
+
+    function scrollNavbar(){
+        window.addEventListener('scroll', () => {
+            const mobileNav = document.querySelector('#mobile-nav');
+
+            if (window.scrollY > 50) {
+                mobileNav.classList.add('scrolled');
+            } else {
+                mobileNav.classList.remove('scrolled');
+            }
+        });
     }
 
     function toggleNavbar() {
