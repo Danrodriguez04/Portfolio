@@ -10,7 +10,7 @@ export class EmailController {
 
 
     sendEmail(emailDto){
-        this.#emailService.sendEmail(emailDto);
+        this.#emailService.sendMessage(emailDto);
     }
 
 

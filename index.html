@@ -254,9 +254,12 @@
     import {TranslationController} from "./controller/TranslationController.js";
     import {ProjectController} from "./controller/ProjectController.js";
     import {SkillController} from "./controller/SkillController.js";
+    import {EmailController} from "./controller/EmailController.js";
+    import {EmailDto} from "./dto/EmailDto.js";
 
     (async () => {
         const translationController = new TranslationController();
+        const emailController = new EmailController();
         const projectController = new ProjectController();
         const skillController = new SkillController();
         const projects = await projectController.findAllProjects();
@@ -264,10 +267,10 @@
 
         drawProjects(projects);
         drawSkills(skills);
-        await addEvents(translationController);
+        await addEvents(translationController, emailController);
     })();
 
-    async function addEvents(translationController) {
+    async function addEvents(translationController, emailController) {
         const buttonsOpenNav = document.querySelector('#open-navbar');
         const buttonCloseNavbar = document.querySelector('#close-nav');
 
@@ -283,6 +286,7 @@
         verifyUser();
         verifyEmail();
         verifyMessage();
+        sendContactFormEvent(emailController);
         languageSelectorEvent();
         await translateEvent(translationController);
     }
@@ -399,6 +403,23 @@
             }
 
             checkContactForm();
+        });
+    }
+
+    function sendContactFormEvent(emailController) {
+
+        const sendButton = document.querySelector('#send');
+
+        sendButton.addEventListener('click', () => {
+            const nameUser = document.querySelector('#nameuser').value;
+            const email = document.querySelector('#email').value;
+            const message = document.querySelector('#message').value;
+            const subject = document.querySelector('#subject').value;
+            const savedLanguage = localStorage.getItem("language") || "es";
+
+            const emailDto = new EmailDto(nameUser,email, subject, message, savedLanguage);
+
+            emailController.sendEmail(emailDto);
         });
     }
 
