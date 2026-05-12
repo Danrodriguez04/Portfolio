@@ -221,7 +221,6 @@
     .navbar{
         position: fixed;
         top: 0;
-        left: 0;
         width: 100%;
         height: 85px;
         align-items: center;
@@ -233,15 +232,9 @@
     }
 
     #mobile-nav{
-        position: relative;
+        position: static;
         width: auto;
-        padding: 0;
-        background: transparent;
         border: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-shrink: 0;
     }
 
     #mobile-nav.scrolled{
@@ -251,35 +244,20 @@
     }
 
     #container-nav{
-        position: static;
-        inset: unset;
-        width: auto;
-        height: auto;
+        width: 100%;
         opacity: 1;
         visibility: visible;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex: 1;
     }
 
     #navbar-content{
         position: static;
-
         transform: none;
-
-        width: auto;
-        height: auto;
-
+        width: 100%;
+        height: 100%;
         background: transparent;
-
         border: none;
         box-shadow: none;
-
-        display: flex;
-        flex-direction: row;
         align-items: center;
-        justify-content: flex-end;
     }
 
     .container-nav{
@@ -318,6 +296,10 @@
         background-color: #f2f2f2;
     }
 
+    #mobile-nav{
+        flex-shrink: 0;
+    }
+
     #mobile-nav > a{
         align-items: center;
         gap: 10px;
@@ -333,6 +315,7 @@
     }
 
     #mobile-nav > div:nth-child(2){
+        margin-left: 30px;
         display: flex;
         align-items: center;
     }
