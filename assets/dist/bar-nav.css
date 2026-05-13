@@ -1,25 +1,27 @@
-
 .navbar{
-    position: relative;
-    display: flex;
-    z-index: 3;
-}
-
-#mobile-nav{
     width: 100%;
-    padding: 15px 10px;
     position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    opacity: 1;
-    background-color: white;
     border-bottom: solid 1px #e5e5e5;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#mobile-nav.scrolled {
+#mobile-nav{
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar>div:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar.scrolled {
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -219,9 +221,11 @@
     }
 
     .navbar{
-        position: fixed;
-        top: 0;
+        margin-top: 30px;
         width: 100%;
+        max-width: 1440px;
+        position: relative;
+        top: 0;
         height: 85px;
         align-items: center;
         justify-content: space-between;
@@ -229,17 +233,12 @@
         background: rgba(255,255,255,0.75);
         backdrop-filter: blur(14px);
         border-bottom: 1px solid rgba(0,0,0,0.06);
+        border-radius: 15px;
     }
 
     #mobile-nav{
         position: static;
         width: auto;
-        border: none;
-    }
-
-    #mobile-nav.scrolled{
-        background: transparent;
-        backdrop-filter: none;
         border: none;
     }
 
