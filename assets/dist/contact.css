@@ -140,6 +140,50 @@ a.card:hover{
 }
 
 
+@media screen and (min-width: 1024px) {
+    #contact{
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 10%;
+        justify-content: center;
+    }
+
+    .title-contact{
+        width: 100%;
+    }
+
+    .title-contact > span:nth-child(2),
+    .title-contact > p:nth-child(3){
+        text-align: left;
+    }
+
+    .info-contact{
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        border-bottom: none;
+    }
+
+    .info-contact > ul{
+        padding: 20px 0;
+    }
+
+    #contact > form{
+        width: 40%;
+    }
+
+    /* Inputs más compactos en desktop */
+    #contact > form > input,
+    #contact > form > textarea,
+    #contact > form > button{
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .send-form{
+        padding: 18px;
+    }
+}
 
 
 
