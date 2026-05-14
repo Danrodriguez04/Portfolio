@@ -235,7 +235,7 @@
                 Es necesario escribir un mensaje
             </span>
 
-            <button class="send-form" id="send" type="submit">
+            <button class="send-form" id="send" type="button" disabled>
                 <i class="fa-regular fa-paper-plane"></i>
                 <span data-i18n="form.send">Enviar mensaje</span>
             </button>
@@ -338,10 +338,10 @@
         let submitOk = true;
 
         if (nameUser.length < 1 || email === -1 || message.length < 1) {
-            submitOk = false
             sendButton.classList.add('error-form')
             sendButton.classList.remove('no-error-form')
         } else {
+            submitOk = false
             sendButton.classList.remove('error-form')
             sendButton.classList.add('no-error-form')
         }

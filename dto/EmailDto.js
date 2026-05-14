@@ -56,4 +56,14 @@ export class EmailDto {
     setLanguage(value) {
         this.#language = value;
     }
+
+    toJSON() {
+        return {
+            name: this.#name,
+            email: this.#email,
+            issue: this.#issue,
+            message: this.#message,
+            language: this.#language
+        };
+    }
 }
