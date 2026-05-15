@@ -186,7 +186,7 @@
       "skills": [
         {
           "name": "Java",
-          "classIcon": "fa-brands fa-html5",
+          "classIcon": "fa-brands fa-java",
           "type": "backend"
         },
         {
