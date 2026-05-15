@@ -87,7 +87,7 @@ main.is-active{
 
 footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px 0;
@@ -113,5 +113,6 @@ footer{
     footer{
         width: 100%;
         justify-content: center;
+        flex-direction: column;
     }
 }

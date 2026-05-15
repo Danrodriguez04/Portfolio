@@ -36,6 +36,10 @@
       "1": {
         "name": "Personal portfolio",
         "description": "Web portfolio built with HTML, CSS, and JavaScript, focused on the fundamentals of frontend development."
+      },
+      "2": {
+        "name": "Contact Mail Service",
+        "description": "Contact service that sends a confirmation message after submitting the form."
       }
     }
   },

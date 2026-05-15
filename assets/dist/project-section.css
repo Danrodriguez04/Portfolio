@@ -108,8 +108,12 @@
 }
 
 @media (min-width: 1024px) {
-    .card-project {
-        flex-basis: 20%;
 
+    #project-list{
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 23% 23% 23% 23%;
+        justify-content: center;
+        gap: 20px;
     }
 }

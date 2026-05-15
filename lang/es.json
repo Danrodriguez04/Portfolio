@@ -36,6 +36,10 @@
       "1": {
         "name": "Portfolio personal",
         "description": "Portfolio web con HTML, CSS y JavaScript enfocado en los fundamentos del desarrollo frontend."
+      },
+      "2": {
+        "name": "Servicio de Correo de Contacto",
+        "description": "Servicio de contacto que envía una confirmación tras enviar el formulario."
       }
     }
   },
