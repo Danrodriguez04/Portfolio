@@ -253,7 +253,7 @@
     </div>
 </footer>
 
-<div id="snackbar"><p data-i18n="email-send">Mensaje enviado correctamente</p> ✅</div>
+<div id="snackbar"><p id="snackbar-text" data-i18n="email-send">Mensaje enviado correctamente</p></div>
 
 <script type="module">
     'use strict';
@@ -612,10 +612,13 @@
 
     function showSnackbar(isSend) {
         const snackbar = document.getElementById("snackbar");
+        const snackbarText = document.getElementById("snackbar-text");
 
         if (isSend){
+            snackbarText.setAttribute("data-i18n","email-send")
             snackbar.className = "show success";
         }else {
+            snackbarText.setAttribute("data-i18n","email-failed")
             snackbar.className = "show error";
         }
 

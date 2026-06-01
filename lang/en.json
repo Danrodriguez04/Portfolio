@@ -69,5 +69,6 @@
     "send": "Send message"
   },
   "rights": "Rights reserved",
-  "email-send": "Message sent successfully"
+  "email-send": "Message sent successfully",
+  "email-failed": "The message could not be sent successfully"
 }

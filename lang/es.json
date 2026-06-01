@@ -69,5 +69,6 @@
     "send": "Enviar mensaje"
   },
   "rights": "Derechos reservados",
-  "email-send": "Mensaje enviado correctamente"
+  "email-send": "Mensaje enviado correctamente",
+  "email-failed": "No se ha podido enviar el mensaje correctamente"
 }
