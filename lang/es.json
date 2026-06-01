@@ -68,5 +68,6 @@
     "messageError": "Es necesario escribir un mensaje",
     "send": "Enviar mensaje"
   },
-  "rights": "Derechos reservados"
+  "rights": "Derechos reservados",
+  "email-send": "Mensaje enviado correctamente"
 }

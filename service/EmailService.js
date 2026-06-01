@@ -2,7 +2,7 @@
 export class EmailService {
 
     async sendMessage(emailDto){
-        const response = await fetch(`http://api.danielsspace.com:8080/EmailSender-0.0.1/api/email`, {
+        const response = await fetch(`https://www.danielsspace.com/api/email`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -10,7 +10,7 @@ export class EmailService {
             body: JSON.stringify(emailDto)
         });
 
-        return await response.json();
+        return response.status === 200;
     }
 
 }

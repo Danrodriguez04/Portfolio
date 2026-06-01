@@ -253,6 +253,8 @@
     </div>
 </footer>
 
+<div id="snackbar"><p data-i18n="email-send">Mensaje enviado correctamente</p> ✅</div>
+
 <script type="module">
     'use strict';
 
@@ -415,7 +417,7 @@
 
         const sendButton = document.querySelector('#send');
 
-        sendButton.addEventListener('click', () => {
+        sendButton.addEventListener('click', async() => {
             const nameUser = document.querySelector('#nameuser').value;
             const email = document.querySelector('#email').value;
             const message = document.querySelector('#message').value;
@@ -424,7 +426,9 @@
 
             const emailDto = new EmailDto(nameUser,email, subject, message, savedLanguage);
 
-            emailController.sendEmail(emailDto);
+            const response = await emailController.sendEmail(emailDto);
+
+            showSnackbar(response);
         });
     }
 
@@ -605,6 +609,21 @@
 
         projectContainer.append(card);
     }
+
+    function showSnackbar(isSend) {
+        const snackbar = document.getElementById("snackbar");
+
+        if (isSend){
+            snackbar.className = "show success";
+        }else {
+            snackbar.className = "show error";
+        }
+
+        setTimeout(() => {
+            snackbar.classList.remove("show");
+        }, 3000);
+    }
+
 
 
 </script>

@@ -68,5 +68,6 @@
     "messageError": "A message is required",
     "send": "Send message"
   },
-  "rights": "Rights reserved"
+  "rights": "Rights reserved",
+  "email-send": "Message sent successfully"
 }

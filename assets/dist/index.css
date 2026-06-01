@@ -94,6 +94,43 @@ footer{
     background-color: #e5e5e5;
 }
 
+#snackbar{
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%) translateY(20px);
+
+    background: #111;
+    color: white;
+
+    padding: 14px 20px;
+    border-radius: 14px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.35s ease;
+
+    z-index: 99999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+#snackbar.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+#snackbar.success{
+    background: #16a34a;
+}
+
+#snackbar.error{
+    background: #dc2626;
+}
 
 @media screen and (min-width: 1024px) {
 
