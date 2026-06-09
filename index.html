@@ -7,12 +7,7 @@
     <meta name="description" content="Portfolio Daniel Rodriguez" data-i18n-content="meta.description">
     <meta name="keywords" content="Web Developer, Mobile Developer, Portfolio Daniel Rodriguez" data-i18n-content="meta.keywords">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="assets/dist/index.css">
-    <link rel="stylesheet" href="assets/dist/bar-nav.css">
-    <link rel="stylesheet" href="assets/dist/contact.css">
-    <link rel="stylesheet" href="assets/dist/about-me.css">
-    <link rel="stylesheet" href="assets/dist/project-section.css">
-    <link rel="stylesheet" href="assets/dist/skill-section.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
     <link rel="icon" href="assets/favicon.png">
     <title data-i18n="meta.title">Portfolio</title>
@@ -51,7 +46,7 @@
                 <div id="follow">
                     <span data-i18n="nav.follow">También me puedes encontrar en</span>
                     <div class="social">
-                        <a href="www.linkedin.com/in/daniel-santiago-rodríguez-bbb067221" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/daniel-santiago-rodríguez-bbb067221" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -245,7 +240,7 @@
 
 <footer>
     <div class="social">
-        <a href="www.linkedin.com/in/daniel-santiago-rodríguez-bbb067221" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/daniel-santiago-rodríguez-bbb067221" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
     </div>
     <div>
         <i class="fa-regular fa-copyright"></i>
@@ -566,7 +561,7 @@
         const techList = document.createElement('DIV');
         const image = document.createElement('IMG');
         const content = document.createElement('ARTICLE');
-        const title = document.createElement('H4');
+        const title = document.createElement('SPAN');
         const description = document.createElement('p');
         const button = document.createElement('A');
         const iconButton = document.createElement('I')
@@ -575,6 +570,7 @@
 
         card.className = 'card-project';
         image.src = `${project.getImageLocation()}`;
+        image.alt = `${project.getName()}`;
         overlay.className = "overlay";
         techList.className = "tech-list";
         button.href = project.getHref();
@@ -583,6 +579,7 @@
 
         const projectKey = project.getId();
 
+        title.className = 'title-card';
         title.dataset.i18n = `projects.items.${projectKey}.name`;
         description.dataset.i18n = `projects.items.${projectKey}.description`;
         seeProject.dataset.i18n = `projects.seeProject`;

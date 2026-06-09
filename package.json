@@ -1,24 +1,16 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Personal Porfolio",
-  "homepage": "https://github.com/Danrodriguez04/Portfolio#readme",
-  "bugs": {
-    "url": "https://github.com/Danrodriguez04/Portfolio/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Danrodriguez04/Portfolio.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
+  "description": "Personal Portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve --mode development"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "bootstrap": "^5.3.8"
+  "author": "Daniel Rodriguez",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1"
   }
 }
