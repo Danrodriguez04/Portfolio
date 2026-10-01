@@ -1,6 +1,44 @@
 @font-face {
     font-family: regularFont;
-    src: url(../fonts/Roboto-VariableFont_wdth,wght.ttf);
+    src: url(../fonts/Roboto-Variable-latin.woff2) format("woff2-variations"),
+         url(../fonts/Roboto-Variable-latin.woff2) format("woff2");
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+/* Paleta centralizada: todos los colores cumplen contraste WCAG AA sobre blanco */
+:root {
+    --color-text: #111111;
+    --color-text-muted: #595959;   /* 7.0:1  */
+    --color-text-soft: #6b6b6b;    /* 5.3:1  */
+    --color-border: #e5e5e5;
+    --color-surface: #fafafa;
+    --color-accent: #0f766e;       /* 5.5:1  */
+    --color-accent-bg: rgba(15, 118, 110, 0.10);
+    --color-error: #b91c1c;        /* 6.5:1  */
+    --header-offset: 110px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: var(--header-offset);
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
 
 * {
@@ -11,6 +49,8 @@
 }
 
 body {
+    background-color: #ffffff;
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
 }
@@ -51,7 +91,7 @@ h1 {
 
 h2 {
     font-size: 22px;
-    color: #7a7a7a;
+    color: var(--color-text-soft);
 }
 
 h3{
@@ -88,6 +128,7 @@ main.is-active{
 footer{
     display: flex;
     flex-direction: column;
+    row-gap: 12px;
     justify-content: center;
     align-items: center;
     padding: 40px 0;
@@ -144,7 +185,9 @@ footer{
     }
 
     main{
+        width: 100%;
         max-width: 1440px;
+        margin-top: 120px;   /* altura de la cabecera fija en escritorio (30px + 85px) */
         justify-content: center;
     }
     footer{

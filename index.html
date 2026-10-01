@@ -1,28 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Daniel Rodriguez">
-    <meta name="description" content="Portfolio Daniel Rodriguez" data-i18n-content="meta.description">
-    <meta name="keywords" content="Web Developer, Mobile Developer, Portfolio Daniel Rodriguez" data-i18n-content="meta.keywords">
-    <meta name="robots" content="index, follow">
+    <title data-i18n="meta.title">Daniel Rodríguez | Desarrollador Full Stack Web y Mobile</title>
+    <meta name="description" content="Daniel Rodríguez, desarrollador Full Stack web y mobile en Manacor (Mallorca). Java, Spring, JavaScript, Angular, Vue y Flutter. Mira mis proyectos y contacta conmigo." data-i18n-content="meta.description">
+    <meta name="author" content="Daniel Rodríguez">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0f766e">
+    <link rel="canonical" href="https://www.danielsspace.com/">
+
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Daniel Rodríguez">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://www.danielsspace.com/">
+    <meta property="og:title" content="Daniel Rodríguez | Desarrollador Full Stack Web y Mobile">
+    <meta property="og:description" content="Desarrollador Full Stack web y mobile en Mallorca. Java, Spring, JavaScript, Angular, Vue y Flutter.">
+    <meta property="og:image" content="https://www.danielsspace.com/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Daniel Rodríguez, desarrollador Full Stack web y mobile">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daniel Rodríguez | Desarrollador Full Stack Web y Mobile">
+    <meta name="twitter:description" content="Desarrollador Full Stack web y mobile en Mallorca. Java, Spring, JavaScript, Angular, Vue y Flutter.">
+    <meta name="twitter:image" content="https://www.danielsspace.com/assets/og-image.png">
+
+    <!-- Iconos -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Rendimiento: precarga de la fuente principal -->
+    <link rel="preload" href="/assets/fonts/Roboto-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="stylesheet" href="assets/dist/index.css">
     <link rel="stylesheet" href="assets/dist/bar-nav.css">
     <link rel="stylesheet" href="assets/dist/contact.css">
     <link rel="stylesheet" href="assets/dist/about-me.css">
     <link rel="stylesheet" href="assets/dist/project-section.css">
     <link rel="stylesheet" href="assets/dist/skill-section.css">
-    <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
-    <link rel="icon" href="assets/favicon.png">
-    <title data-i18n="meta.title">Portfolio</title>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+
+    <!-- Datos estructurados (Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.danielsspace.com/#person",
+          "name": "Daniel Rodríguez",
+          "alternateName": "Daniel Santiago Rodríguez",
+          "url": "https://www.danielsspace.com/",
+          "image": "https://www.danielsspace.com/assets/icons/icon-512.png",
+          "jobTitle": "Desarrollador Full Stack Web y Mobile",
+          "worksFor": {"@type": "Organization", "name": "Cárnicas Sunyer"},
+          "alumniOf": [
+            {"@type": "EducationalOrganization", "name": "CIFP Politècnic Llevant"},
+            {"@type": "EducationalOrganization", "name": "IES Manacor"}
+          ],
+          "address": {"@type": "PostalAddress", "addressLocality": "Manacor", "addressRegion": "Illes Balears", "addressCountry": "ES"},
+          "knowsAbout": ["Java", "Spring", "JavaScript", "TypeScript", "Angular", "Vue.js", "Flutter", "Dart", "PHP", "Laravel", "Node.js", "SQL", "Docker", "AWS"],
+          "knowsLanguage": ["es", "en", "it"],
+          "sameAs": [
+            "https://www.linkedin.com/in/daniel-santiago-rodr%C3%ADguez-bbb067221",
+            "https://github.com/Danrodriguez04"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.danielsspace.com/#website",
+          "url": "https://www.danielsspace.com/",
+          "name": "Daniel Rodríguez - Portfolio",
+          "inLanguage": "es",
+          "publisher": {"@id": "https://www.danielsspace.com/#person"}
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 <header>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navegación principal">
         <div id="mobile-nav">
-            <a href="#home">
-                <img id="logo" src="/assets/favicon.png" alt="Logo">
+            <a href="#home" aria-label="Daniel Rodríguez - Inicio">
+                <img id="logo" src="/assets/icons/logo-120.webp" alt="Logo de Daniel Rodríguez" width="60" height="60">
                 <span>Daniel Rodríguez</span>
             </a>
         </div>
@@ -30,7 +94,7 @@
             <div id="navbar-content">
                 <div id="dropdown">
                     <span id="title-nav" data-i18n="nav.title">Navegación</span>
-                    <span id="close-nav"><i class="fa-solid fa-xmark"></i></span>
+                    <button type="button" id="close-nav" aria-label="Cerrar menú"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
                 </div>
                 <div class="container-nav">
                     <div class="navbar-brand">
@@ -41,7 +105,7 @@
                                     data-i18n="nav.about">Sobre mí</span></a></li>
                             <li><a href="#projects"><i class="fa-solid fa-jet-fighter"></i> <span
                                     data-i18n="nav.projects">Proyectos</span></a></li>
-                            <li><a href="#skils"><i class="fa-regular fa-chart-bar"></i> <span data-i18n="nav.skills">Habilidades</span></a>
+                            <li><a href="#skills"><i class="fa-regular fa-chart-bar"></i> <span data-i18n="nav.skills">Habilidades</span></a>
                             </li>
                             <li><a href="#contact"><i class="fa-regular fa-envelope"></i> <span data-i18n="nav.contact">Contacto</span></a>
                             </li>
@@ -51,14 +115,15 @@
                 <div id="follow">
                     <span data-i18n="nav.follow">También me puedes encontrar en</span>
                     <div class="social">
-                        <a href="www.linkedin.com/in/daniel-santiago-rodríguez-bbb067221" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/daniel-santiago-rodr%C3%ADguez-bbb067221" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Daniel Rodríguez"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="https://github.com/Danrodriguez04" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Daniel Rodríguez"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
         </div>
         <div>
             <div class="language-dropdown">
-                <button id="lang-btn">
+                <button type="button" id="lang-btn" aria-label="Cambiar idioma" aria-haspopup="true" aria-controls="lang-menu">
                     <i class="fa-solid fa-globe"></i>
                     <span id="current-lang">ES</span>
                 </button>
@@ -69,7 +134,7 @@
                     <li data-lang="it"><span>Italiano</span><span class="flag">🇮🇹</span></li>
                 </ul>
             </div>
-            <span id="open-navbar"><i class="fa-solid fa-bars"></i></span>
+            <button type="button" id="open-navbar" aria-label="Abrir menú" aria-controls="container-nav" aria-expanded="false"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
         </div>
     </nav>
 </header>
@@ -78,9 +143,9 @@
     <section id="home">
         <span id="greeting" data-i18n="home.greeting">Hola!, soy </span>
         <h1 id="name">Daniel Rodríguez</h1>
-        <span id="job" data-i18n="home.job">
-            Desarrollador web/mobile con ganas de crear y mejorar experiencias y funcionalidades
-        </span>
+        <p id="job" data-i18n="home.job">
+            Desarrollador Full Stack web y mobile con ganas de crear y mejorar experiencias y funcionalidades
+        </p>
     </section>
     <section id="about">
         <h2 data-i18n="about.title">SOBRE MÍ</h2>
@@ -133,7 +198,7 @@
         <span id="project-description" data-i18n="projects.description">Proyectos que reflejan mi aprendizaje y evolución como desarrollador.</span>
         <div id="project-list"></div>
     </section>
-    <section id="skils">
+    <section id="skills">
         <h2 data-i18n="skills.title">Habilidades</h2>
         <div id="skills-list"></div>
     </section>
@@ -181,11 +246,12 @@
                     type="text"
                     id="nameuser"
                     name="nameuser"
+                    autocomplete="name"
                     placeholder="Ingresa tu nombre"
                     data-i18n-placeholder="form.namePlaceholder"
             >
 
-            <span id="error-name" class="no-error" data-i18n="form.nameError">
+            <span id="error-name" class="no-error" role="alert" data-i18n="form.nameError">
                 Introduce un nombre
             </span>
 
@@ -198,11 +264,12 @@
                     type="email"
                     id="email"
                     name="email"
+                    autocomplete="email"
                     placeholder="tu@email.com"
                     data-i18n-placeholder="form.emailPlaceholder"
             >
 
-            <span id="error-email" class="no-error" data-i18n="form.emailError">
+            <span id="error-email" class="no-error" role="alert" data-i18n="form.emailError">
                 Introduce un correo válido
             </span>
 
@@ -227,11 +294,13 @@
 
             <textarea
                     id="message"
+                    name="message"
+                    rows="6"
                     placeholder="Cuéntame sobre tu idea, proyecto, propuesta o consulta!"
                     data-i18n-placeholder="form.messagePlaceholder"
             ></textarea>
 
-            <span id="error-message" class="no-error" data-i18n="form.messageError">
+            <span id="error-message" class="no-error" role="alert" data-i18n="form.messageError">
                 Es necesario escribir un mensaje
             </span>
 
@@ -245,18 +314,22 @@
 
 <footer>
     <div class="social">
-        <a href="www.linkedin.com/in/daniel-santiago-rodríguez-bbb067221" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/daniel-santiago-rodr%C3%ADguez-bbb067221" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Daniel Rodríguez"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="https://github.com/Danrodriguez04" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Daniel Rodríguez"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
     </div>
     <div>
-        <i class="fa-regular fa-copyright"></i>
-        <span data-i18n="rights"> Derechos reservados</span>
+        <span>&copy; <span id="year">2026</span> Daniel Rodríguez ·</span>
+        <span data-i18n="rights">Derechos reservados</span>
     </div>
 </footer>
 
-<div id="snackbar"><p id="snackbar-text" data-i18n="email-send">Mensaje enviado correctamente</p></div>
+<div id="snackbar" role="status" aria-live="polite"><p id="snackbar-text" data-i18n="email-send">Mensaje enviado correctamente</p></div>
 
 <script type="module">
     'use strict';
+
+    let currentTranslations = {};
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     import {TranslationController} from "./controller/TranslationController.js";
     import {ProjectController} from "./controller/ProjectController.js";
@@ -328,19 +401,21 @@
     }
 
     function openNavbar() {
+        document.querySelector('#open-navbar').setAttribute('aria-expanded', 'true');
         document.querySelector('#container-nav').classList.add('is-active');
         document.querySelector('main').classList.add('is-active');
     }
 
     function closeNavbar(){
+        document.querySelector('#open-navbar').setAttribute('aria-expanded', 'false');
         document.querySelector('#container-nav').classList.remove('is-active');
         document.querySelector('main').classList.remove('is-active');
     }
 
     function checkContactForm() {
         const nameUser = document.querySelector('#nameuser').value;
-        const email = document.querySelector('#email').value.indexOf('@');
-        const message = document.querySelector('#message').value;
+        const email = isValidEmail(document.querySelector('#email').value) ? 0 : -1;
+        const message = document.querySelector('#message').value.trim();
         const sendButton = document.querySelector('#send');
 
         let submitOk = true;
@@ -362,7 +437,7 @@
         const errorName = document.querySelector('#error-name');
 
         nameUser.addEventListener('input', (event) => {
-            const nameUserValue = event.target.value;
+            const nameUserValue = event.target.value.trim();
             if (nameUserValue.length < 1) {
                 errorName.classList.add('error');
                 errorName.classList.remove('no-error');
@@ -375,12 +450,16 @@
         });
     }
 
+    function isValidEmail(value) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim());
+    }
+
     function verifyEmail() {
         const email = document.querySelector('#email');
         const errorEmail = document.querySelector('#error-email');
 
         email.addEventListener('input', (event) => {
-            const emailValue = event.target.value.indexOf('@');
+            const emailValue = isValidEmail(event.target.value) ? 0 : -1;
 
             if (emailValue === -1) {
                 errorEmail.classList.add('error');
@@ -399,7 +478,7 @@
         const errorMessage = document.querySelector('#error-message');
 
         message.addEventListener('input', (event) => {
-            const messageValue = event.target.value;
+            const messageValue = event.target.value.trim();
 
             if (messageValue.length < 1) {
                 errorMessage.classList.add('error');
@@ -449,6 +528,7 @@
 
     async function loadLanguage(translationController, lang) {
         const translations = await translationController.loadLanguage(lang);
+        currentTranslations = translations;
         applyTranslations(translations);
 
         localStorage.setItem("language", lang);
@@ -504,7 +584,6 @@
                 currentLang.textContent = lang.toUpperCase();
                 langMenu.classList.add("hidden");
 
-                applyTranslations(lang); // tu función existente
             });
         });
 
@@ -532,7 +611,7 @@
 
         categories.forEach((category)=>{
             const categorySkill = document.createElement('DIV');
-            const categoryTitle = document.createElement('H3');
+            const categoryTitle = document.createElement('H3');  // h2 (sección) > h3 (categoría)
             const skillsContainer = document.createElement('DIV');
             categorySkill.classList.add("skill-category");
             skillsContainer.classList.add('skill-container', category);
@@ -566,7 +645,7 @@
         const techList = document.createElement('DIV');
         const image = document.createElement('IMG');
         const content = document.createElement('ARTICLE');
-        const title = document.createElement('H4');
+        const title = document.createElement('H3');
         const description = document.createElement('p');
         const button = document.createElement('A');
         const iconButton = document.createElement('I')
@@ -575,10 +654,19 @@
 
         card.className = 'card-project';
         image.src = `${project.getImageLocation()}`;
+        image.alt = project.getName();
+        image.width = 800;
+        image.height = 800;
+        image.loading = 'lazy';
+        image.decoding = 'async';
         overlay.className = "overlay";
         techList.className = "tech-list";
         button.href = project.getHref();
         button.className = 'see-more';
+        if (project.getHref().startsWith('http')) {
+            button.target = '_blank';
+            button.rel = 'noopener noreferrer';
+        }
         iconButton.className = 'fa-solid fa-arrow-up-right-from-square';
 
         const projectKey = project.getId();
@@ -591,6 +679,8 @@
             const techItem = document.createElement('SPAN');
             const iconTech = document.createElement('I');
             iconTech.className = tech.getClassIcon();
+            iconTech.setAttribute('aria-hidden', 'true');
+            techItem.title = tech.getName();
             techItem.append(iconTech);
             techList.append(techItem);
         });
@@ -614,13 +704,10 @@
         const snackbar = document.getElementById("snackbar");
         const snackbarText = document.getElementById("snackbar-text");
 
-        if (isSend){
-            snackbarText.setAttribute("data-i18n","email-send")
-            snackbar.className = "show success";
-        }else {
-            snackbarText.setAttribute("data-i18n","email-failed")
-            snackbar.className = "show error";
-        }
+        const key = isSend ? "email-send" : "email-failed";
+        snackbarText.setAttribute("data-i18n", key);
+        snackbarText.textContent = getTranslation(key, currentTranslations) || snackbarText.textContent;
+        snackbar.className = isSend ? "show success" : "show error";
 
         setTimeout(() => {
             snackbar.classList.remove("show");

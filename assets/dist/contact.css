@@ -12,7 +12,7 @@
     padding: 20px 15px;
 }
 .title-contact>p{
-    color: #7a7a7a;
+    color: var(--color-text-soft);
 }
 
 .title-contact>span:nth-child(2){
@@ -22,7 +22,7 @@
 }
 
 .title-contact>p:nth-child(3){
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -68,7 +68,7 @@ a.card:hover{
 }
 
 .card-title{
-    color: #909090;
+    color: var(--color-text-soft);
 }
 
 .card-content{
@@ -107,11 +107,16 @@ a.card:hover{
 }
 
 .subtext{
-    color: #b9b9b9;
+    color: #767676;
 }
 
 #error-name,#error-email,#error-message{
-    color: red;
+    color: var(--color-error);
+}
+
+#contact>form>input:focus, #contact>form>textarea:focus{
+    border-color: var(--color-accent);
+    outline: none;
 }
 
 .no-error{
@@ -135,8 +140,12 @@ a.card:hover{
 
 .no-error-form{
     color: white;
-    background-color: black;
+    background-color: var(--color-accent);
     cursor: pointer;
+}
+
+.no-error-form:hover{
+    filter: brightness(110%);
 }
 
 
@@ -154,7 +163,7 @@ a.card:hover{
 
     .title-contact > span:nth-child(2),
     .title-contact > p:nth-child(3){
-        text-align: left;
+        text-align: center;
     }
 
     .info-contact{

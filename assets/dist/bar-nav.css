@@ -41,6 +41,7 @@
 
 #logo{
     width: 60px;
+    height: 60px;
 }
 
 #open-navbar>i, #close-nav>i{
@@ -91,6 +92,10 @@
 #close-nav, #open-navbar{
     padding: 14px 14px;
     color: #0a0a0a;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
 }
 
 #close-nav{
@@ -103,7 +108,26 @@
 }
 
 #title-nav, #follow>span:nth-child(1) {
-    color: #7a7a7a;
+    color: var(--color-text-soft);
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+}
+
+.social>a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;      /* zona táctil mínima recomendada */
+    min-height: 44px;
+    border-radius: 12px;
+}
+
+.social>a:hover{
+    background-color: var(--color-border);
 }
 
 
@@ -306,6 +330,7 @@
 
     #logo{
         width: 52px;
+        height: 52px;
     }
 
     #mobile-nav > a > span{

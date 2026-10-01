@@ -148,7 +148,7 @@
       "description": "A modern responsive portfolio showcasing developer work, bio, and contact.",
       "location": "Manacor, Spain",
       "date": "08-05-2026",
-      "imageLocation": "/assets/img/portfolio.webp",
+      "imageLocation": "/assets/img/portfolio-800.webp",
       "status": "Completed",
       "href": "#",
       "skills": [
@@ -180,7 +180,7 @@
       "description": "Contact service to send confirmation of your message",
       "location": "Manacor, Spain",
       "date": "15-05-2026",
-      "imageLocation": "/assets/img/email-service.webp",
+      "imageLocation": "/assets/img/email-service-800.webp",
       "status": "Completed",
       "href": "https://github.com/Danrodriguez04/EmailServer",
       "skills": [
@@ -190,8 +190,8 @@
           "type": "backend"
         },
         {
-          "name": "Springboot",
-          "classIcon": "fa-brands fa-css3-alt",
+          "name": "Spring Boot",
+          "classIcon": "fa-solid fa-leaf",
           "type": "backend"
         }
       ]

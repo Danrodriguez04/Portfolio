@@ -1,8 +1,7 @@
 {
   "meta": {
-    "title": "Portfolio | Daniel Rodríguez",
-    "description": "Portfolio of Daniel Rodríguez, junior web and mobile developer specialized in JavaScript, Java, Flutter and Angular.",
-    "keywords": "web developer, mobile developer, portfolio, JavaScript, Java, Flutter, Angular"
+    "title": "Daniel Rodríguez | Full Stack Web & Mobile Developer",
+    "description": "Daniel Rodríguez, Full Stack web and mobile developer based in Mallorca, Spain. Java, Spring, JavaScript, Angular, Vue and Flutter. See my projects and get in touch."
   },
   "nav": {
     "title": "Navigation",
@@ -15,7 +14,7 @@
   },
   "home": {
     "greeting": "Hi!, I'm ",
-    "job": "Web/mobile developer eager to create, improve experiences and features"
+    "job": "Full Stack web and mobile developer eager to create and improve experiences and features"
   },
   "about": {
     "title": "ABOUT ME",
