@@ -34,6 +34,27 @@
     font-size: 30px;
 }
 
+.skill-card>img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform .2s ease;
+}
+
+.skill-card{
+    background: #fff;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.skill-card:hover{
+    border-color: var(--color-accent);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.skill-card:hover>img{
+    transform: scale(1.08);
+}
+
 .skill-card>p{
     text-align: center;
 }

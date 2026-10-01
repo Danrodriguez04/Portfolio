@@ -3,86 +3,103 @@
     {
       "name": "HTML5",
       "classIcon": "fa-brands fa-html5",
+      "image": "/assets/img/skills/html5.svg",
       "type": "front"
     },
     {
       "name": "CSS",
       "classIcon": "fa-brands fa-css3-alt",
+      "image": "/assets/img/skills/css3.svg",
       "type": "front"
     },
     {
       "name": "SASS",
       "classIcon": "fa-brands fa-sass",
+      "image": "/assets/img/skills/sass.svg",
       "type": "front"
     },
     {
       "name": "JavaScript",
       "classIcon": "fa-brands fa-js",
+      "image": "/assets/img/skills/javascript.svg",
       "type": "front"
     },
     {
       "name": "TypeScript",
       "classIcon": "fa-brands fa-typescript",
+      "image": "/assets/img/skills/typescript.svg",
       "type": "front"
     },
     {
       "name": "Angular",
       "classIcon": "fa-brands fa-angular",
+      "image": "/assets/img/skills/angular.svg",
       "type": "front"
     },
     {
       "name": "Vue.js",
       "classIcon": "fa-brands fa-vuejs",
+      "image": "/assets/img/skills/vuejs.svg",
       "type": "front"
     },
     {
       "name": "Quasar",
       "classIcon": "fa-solid fa-bolt",
+      "image": "/assets/img/skills/quasar.svg",
       "type": "front"
     },
     {
       "name": "jQuery",
       "classIcon": "fa-solid fa-code",
+      "image": "/assets/img/skills/jquery.svg",
       "type": "front"
     },
     {
       "name": "Java",
       "classIcon": "fa-brands fa-java",
+      "image": "/assets/img/skills/java.svg",
       "type": "back"
     },
     {
       "name": "Spring Framework",
       "classIcon": "fa-solid fa-leaf",
+      "image": "/assets/img/skills/spring.svg",
       "type": "back"
     },
     {
       "name": "Spring MVC",
       "classIcon": "fa-solid fa-leaf",
+      "image": "/assets/img/skills/spring.svg",
       "type": "back"
     },
     {
       "name": "Hibernate",
       "classIcon": "fa-solid fa-database",
+      "image": "/assets/img/skills/hibernate.svg",
       "type": "back"
     },
     {
       "name": "PHP",
       "classIcon": "fa-brands fa-php",
+      "image": "/assets/img/skills/php.svg",
       "type": "back"
     },
     {
       "name": "Laravel",
       "classIcon": "fa-brands fa-laravel",
+      "image": "/assets/img/skills/laravel.svg",
       "type": "back"
     },
     {
       "name": "Node.js",
       "classIcon": "fa-brands fa-node-js",
+      "image": "/assets/img/skills/nodejs.svg",
       "type": "back"
     },
     {
       "name": "jsonwebtoken",
       "classIcon": "fa-solid fa-key",
+      "image": "/assets/img/skills/jwt.svg",
       "type": "back"
     },
     {
@@ -93,31 +110,37 @@
     {
       "name": "Microsoft SQL Server",
       "classIcon": "fa-solid fa-database",
+      "image": "/assets/img/skills/sqlserver.svg",
       "type": "database"
     },
     {
       "name": "Git",
       "classIcon": "fa-brands fa-git-alt",
+      "image": "/assets/img/skills/git.svg",
       "type": "tools"
     },
     {
       "name": "GitHub",
       "classIcon": "fa-brands fa-github",
+      "image": "/assets/img/skills/github.svg",
       "type": "tools"
     },
     {
       "name": "Docker",
       "classIcon": "fa-brands fa-docker",
+      "image": "/assets/img/skills/docker.svg",
       "type": "tools"
     },
     {
       "name": "npm",
       "classIcon": "fa-brands fa-npm",
+      "image": "/assets/img/skills/npm.svg",
       "type": "tools"
     },
     {
       "name": "AWS",
       "classIcon": "fa-brands fa-aws",
+      "image": "/assets/img/skills/aws.svg",
       "type": "cloud"
     },
     {
@@ -133,11 +156,13 @@
     {
       "name": "Dart",
       "classIcon": "fa-brands fa-dart-lang",
+      "image": "/assets/img/skills/dart.svg",
       "type": "mobile"
     },
     {
       "name": "Flutter",
       "classIcon": "fa-brands fa-flutter",
+      "image": "/assets/img/skills/flutter.svg",
       "type": "mobile"
     }
   ],
@@ -155,16 +180,19 @@
         {
           "name": "HTML",
           "classIcon": "fa-brands fa-html5",
+          "image": "/assets/img/skills/html5.svg",
           "type": "front"
         },
         {
           "name": "CSS",
           "classIcon": "fa-brands fa-css3-alt",
+          "image": "/assets/img/skills/css3.svg",
           "type": "front"
         },
         {
           "name": "JavaScript",
           "classIcon": "fa-brands fa-js",
+          "image": "/assets/img/skills/javascript.svg",
           "type": "front"
         },
         {
@@ -187,11 +215,13 @@
         {
           "name": "Java",
           "classIcon": "fa-brands fa-java",
+          "image": "/assets/img/skills/java.svg",
           "type": "backend"
         },
         {
           "name": "Spring Boot",
           "classIcon": "fa-solid fa-leaf",
+          "image": "/assets/img/skills/spring.svg",
           "type": "backend"
         }
       ]

@@ -594,6 +594,24 @@
         });
     }
 
+    function createSkillIcon(skill, size) {
+        if (skill.getImage()) {
+            const img = document.createElement('IMG');
+            img.src = skill.getImage();
+            img.alt = skill.getName();
+            img.width = size;
+            img.height = size;
+            img.loading = 'lazy';
+            img.decoding = 'async';
+            img.className = 'skill-logo';
+            return img;
+        }
+        const icon = document.createElement('I');
+        icon.classList.add(...skill.getClassIcon().split(' '));
+        icon.setAttribute('aria-hidden', 'true');
+        return icon;
+    }
+
     function drawProjects(projects) {
         const projectContainer = document.querySelector('#project-list');
 
@@ -626,12 +644,12 @@
             const categorySkill = document.querySelector(`.${skill.getType()}`);
 
             const containerSkill = document.createElement('DIV');
-            const iconSkill = document.createElement('I');
+            const iconSkill = createSkillIcon(skill, 40);
             const iconName = document.createElement('P');
 
             containerSkill.className = 'skill-card';
-            iconSkill.classList.add(...skill.getClassIcon().split(' '), 'iconSkill');
-            iconName.innerHTML = skill.getName();
+            iconSkill.classList.add('iconSkill');
+            iconName.textContent = skill.getName();
 
             containerSkill.append(iconSkill, iconName);
             categorySkill.append(containerSkill);
@@ -677,9 +695,7 @@
 
         project.getSkills().forEach(tech => {
             const techItem = document.createElement('SPAN');
-            const iconTech = document.createElement('I');
-            iconTech.className = tech.getClassIcon();
-            iconTech.setAttribute('aria-hidden', 'true');
+            const iconTech = createSkillIcon(tech, 22);
             techItem.title = tech.getName();
             techItem.append(iconTech);
             techList.append(techItem);

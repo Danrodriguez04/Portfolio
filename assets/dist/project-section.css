@@ -100,6 +100,19 @@
     color: #ffffff;
 }
 
+.tech-list>span:has(img){
+    display: inline-flex;
+    padding: 8px;
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+.tech-list>span>img{
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
 .card-project:hover .overlay {
     opacity: 1;
 }
