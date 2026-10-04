@@ -3,7 +3,7 @@ export class EmailService {
 
     async sendMessage(emailDto){
         try{
-            const response = await fetch(`https://www.danielsspace.com/api/email`, {
+            const response = await fetch(`https://api.danielsspace.com/api/email`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
